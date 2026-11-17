@@ -136,6 +136,58 @@ nav.tabs .ic{display:block;font-size:20px;line-height:1.25}
   .scorecard{position:static;box-shadow:none}
 }
 
+/* ---------- SAISIE EN DIRECT : tout sur un écran ---------- */
+body.livemode{overflow:hidden}
+body.livemode header.top,body.livemode #banner{display:none}
+body.livemode .wrap{padding:calc(6px + var(--sat)) 8px 0;max-width:640px}
+body.livemode #app{height:calc(100dvh - 62px - var(--sab) - var(--sat) - 6px)}
+@media (min-width:900px){body.livemode #app{height:calc(100dvh - 90px)}body.livemode nav.tabs{margin-bottom:8px}}
+.lv{height:100%;display:flex;flex-direction:column;gap:6px;padding-bottom:6px}
+.lv-top{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 8px}
+.lv-score{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px}
+.lv-team{display:flex;align-items:center;gap:8px;min-width:0}
+.lv-team.r{flex-direction:row-reverse}
+.lv-team .tm{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.lv-team.r .tm{text-align:right}
+.lv-team .pts{font-size:32px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.lv-mid{display:flex;gap:6px;align-items:center}
+.lv-mid .clock{font-size:22px;min-width:78px;height:40px}
+.lv-mid .play{width:44px;height:40px}
+.lv-sub{display:flex;align-items:center;gap:6px;margin-top:6px}
+.lv-sub .qsel{flex:1}
+.lv-sub .qsel button{height:30px;padding:0 9px;font-size:12px}
+.tfx{font-size:12px;font-weight:700;color:var(--mute);white-space:nowrap}
+.tfx.bonus{color:var(--ko)}
+.lv-sub .menu{width:36px;height:30px;border-radius:8px;background:var(--bg);font-size:18px;font-weight:800;line-height:1}
+.lv-court{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.lv-court .pl{min-height:62px;padding:5px 2px}
+.lv-court .pl .n{font-size:20px}
+.lv-court .pl .nm{font-size:11px}
+.lv-court .pl .mini{font-size:9.5px}
+.lv-court .empty5{grid-column:1/-1;font-weight:700;color:var(--acc)}
+.lv-bench{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;flex:none}
+.lv-bench::-webkit-scrollbar{display:none}
+.chip{flex:none;height:34px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:13px;white-space:nowrap}
+.chip b{font-weight:800}.chip i{font-style:normal;font-size:11px;color:var(--mute)}
+.chip.sel{border-color:var(--acc);background:var(--acc-soft)}
+.chip.f4 i{color:#d97706;font-weight:700}.chip.f5{opacity:.5}
+.chip.chgt{background:var(--ink);color:var(--card);border-color:var(--ink);font-weight:700}
+.lv-hint{font-size:12.5px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:17px}
+.lv-hint b{color:var(--acc)}
+.lv-pad{flex:1;min-height:150px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:5px}
+.lv-pad .act{min-height:0;padding:2px;font-size:15px}
+.lv-pad .act small{font-size:10px}
+.lv-pad .act{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.lv-pad .act .ic{width:min(40px,10vw);height:min(40px,10vw);flex:none}
+.lv-pad .act .al{line-height:1.05}
+@media (max-height:620px){.lv-pad .act .ic{width:22px;height:22px}}
+.act.ot2{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-size:13px}
+.lv-opp{display:grid;grid-template-columns:repeat(3,1fr) 1.3fr;gap:5px}
+.lv-opp .ob{background:var(--bg);border:1px solid var(--line);border-radius:12px;height:46px;font-weight:800;font-size:15px}
+.lv-opp .ob small{display:block;font-size:9.5px;font-weight:600;color:var(--mute);line-height:1}
+.lv-opp .ub{border:1px solid var(--line);border-radius:12px;height:46px;font-weight:700;font-size:14px}
+.lv-opp .ub:disabled{opacity:.35}
+
 /* ---------- TABLES ---------- */
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -12px;padding:0 12px}
 table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
@@ -180,6 +232,8 @@ tr.tot td{font-weight:800;border-top:2px solid var(--line)}
 .subs button{border:2px solid var(--line);border-radius:12px;min-height:58px;padding:4px;background:var(--bg)}
 .subs button b{display:block;font-size:19px}
 .subs button span{font-size:11.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.subs.chain button{min-height:64px;background:var(--blue-soft);color:var(--blue);border-color:transparent}
+.subs.chain button b{font-size:22px}
 .subs button.on{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
 .courtwrap{max-width:460px;margin:0 auto}
 .court{width:100%;height:auto;display:block;touch-action:manipulation}
@@ -319,9 +373,11 @@ const FB_VER="10.12.2";
 let FS=null,unsubs=[];
 const wq={};
 function fbConfig(){const c=(window.STATS_CONFIG||{}).firebase;return c&&c.apiKey&&!/COLLE/.test(c.apiKey)?c:null}
+let syncCls="";
 function setSync(st){
   const dot=document.getElementById("syncDot"),t=document.getElementById("syncTxt");
-  dot.className="dot "+({ok:"ok",off:"off",ro:"ro",full:"ro",local:"off"}[st]||"");
+  syncCls="dot "+({ok:"ok",off:"off",ro:"ro",full:"ro",local:"off"}[st]||"");dot.className=syncCls;
+  const ld=document.getElementById("liveDot");if(ld)ld.className=syncCls;
   t.textContent={ok:"Synchronisé",off:"Hors-ligne · sauvé ici",ro:"Accès refusé",full:"Quota atteint",local:"Mode local",wait:"Connexion…"}[st]||"";
 }
 function ref(key){return key==="team"?FS.doc(db,"teams",teamCode,"meta","info"):FS.doc(db,"teams",teamCode,"games",key)}
@@ -511,6 +567,7 @@ function render(){
   renderBanner();
   const needJoin=fbConfig()&&!teamCode;
   document.getElementById("tabs").style.display=needJoin?"none":"";
+  document.body.classList.toggle("livemode",!needJoin&&S.view==="live"&&!!S.games[S.cur]);
   document.getElementById("app").innerHTML=needJoin?vJoin():({live:vLive,games:vGames,stats:vStats,team:vTeam})[S.view]();
   tick();
 }
@@ -551,6 +608,23 @@ function plTile(g,b,id,now){
     <div class="mini">${r.pts}pts·${r.pf}F·<span data-min="${id}">${mmss(liveMin(g,id,now))}</span></div></button>`;
 }
 
+/* ---------- Pictogrammes des actions (SVG, couleur = celle du bouton) ---------- */
+const BALL='<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5v17M6.2 6.2c3 3 3 8.6 0 11.6M17.8 6.2c-3 3-3 8.6 0 11.6"/>';
+const ICO={
+  sm:BALL+'<path d="M15 19.5l2.5 2.5 5-5" stroke-width="2.6"/>',
+  sx:BALL+'<path d="M16 16.5l5.5 5.5M21.5 16.5L16 22" stroke-width="2.6"/>',
+  "1m":'<rect x="3" y="2" width="18" height="9" rx="1"/><rect x="9" y="5.5" width="6" height="5.5"/><path d="M6.5 12.5h11M7.5 12.5l1.8 9h5.4l1.8-9M10.3 12.5l.8 9M13.7 12.5l-.8 9M8.3 16.5h7.4"/>',
+  "1x":'<rect x="3" y="2" width="18" height="9" rx="1"/><rect x="9" y="5.5" width="6" height="5.5"/><path d="M6.5 12.5h11M7.5 12.5l1.8 9h5.4l1.8-9M10.3 12.5l.8 9M13.7 12.5l-.8 9M8.3 16.5h7.4"/>',
+  dr:'<path d="M12 2.5l7.5 3v6c0 5-3.3 8.3-7.5 10-4.2-1.7-7.5-5-7.5-10v-6z"/><path d="M12 8v7.5M8.8 12.5l3.2 3.2 3.2-3.2"/>',
+  or:'<path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3.5v5h-5"/><circle cx="12" cy="12" r="2.6"/>',
+  as:'<circle cx="5" cy="18.5" r="2.3"/><circle cx="19" cy="5.5" r="2.3"/><path d="M7 16.5L16.5 7.5M11.5 7h5.5v5.5"/>',
+  st:'<path d="M13.5 2L4.5 13.5h7L10 22l9.5-12h-7z"/>',
+  bk:'<path d="M7 11V5.5a1.5 1.5 0 0 1 3 0V10M10 9.5V4a1.5 1.5 0 0 1 3 0v6M13 10V5a1.5 1.5 0 0 1 3 0v6M16 11V7.5a1.5 1.5 0 0 1 3 0V14c0 4.4-3 7.5-7 7.5-3.2 0-5-1.6-6.6-4.3L3 13.3a1.5 1.5 0 0 1 2.6-1.5L7 14"/>',
+  to:'<circle cx="9" cy="9" r="6"/><path d="M3 9h12M9 3v12"/><path d="M18 11v9.5M15 17.5l3 3 3-3"/>',
+  pf:'<circle cx="8" cy="14.5" r="5.5"/><path d="M8 9h13v4.5h-7.5"/><circle cx="8" cy="14.5" r="1.4" fill="currentColor"/><path d="M15 9V6.5"/>',
+  log:'<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor"/>'
+};
+function ico(k){return ICO[k]?`<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[k]}</svg>`:""}
 function vLive(){
   const g=S.games[S.cur];
   if(!g){
@@ -566,64 +640,70 @@ function vLive(){
   const now=Date.now(),b=box(g,now),q=g.q,qf=(b.qs[q]&&b.qs[q].pf)||0,run=g.clock.run;
   const maxQ=Math.max(4,q,...Object.keys(b.qs).map(Number));
   let qb="";for(let i=1;i<=maxQ;i++)qb+=`<button data-a="q" data-v="${i}" class="${i===q?"on":""}">${qLabel(i)}</button>`;
-  qb+=`<button data-a="q" data-v="${maxQ+1}" title="Prolongation">+P</button>`;
+  qb+=`<button data-a="q" data-v="${maxQ+1}" aria-label="Prolongation">+P</button>`;
   const byNum=(a,c)=>(+(player(a)||{}).num||0)-(+(player(c)||{}).num||0);
   const court=g.oc.filter(id=>(g.players||[]).includes(id)).sort(byNum);
   const bench=(g.players||[]).filter(id=>!g.oc.includes(id)).sort(byNum);
-  const a=(k,sub)=>`<button class="act ${ACTIONS[k].cls} ${S.armed===k?"armed":""}" data-a="act" data-v="${k}">${ACTIONS[k].l}${sub?`<small>${sub}</small>`:""}</button>`;
-  const sp=S.sel&&player(S.sel),sr=S.sel&&(b.rows[S.sel]||finish(emptyRow()));
-  const head=sp?`<div class="sheethead"><div class="big">${esc(sp.num)}</div><div class="who"><b>${esc(sp.name)}</b><span class="small muted">${sr.pts} pts · ${sr.reb} reb · ${sr.ast} pd · ${sr.pf} F · ${mmss(liveMin(g,S.sel,now))}</span></div><button class="x" data-a="desel" aria-label="Fermer">✕</button></div>`
-    :`<div class="sheethead desk-only"><div class="who"><b>${S.armed?ACTIONS[S.armed].lg+" → choisis le joueur":"Choisis un joueur puis l'action (ou l'inverse)"}</b></div></div>`;
-  const evs=(g.events||[]).slice(-40).reverse();
-  return `<div class="live">
-    <div>
-      <div class="card scorecard">
-        <div class="score">
-          <div><div class="tm">${esc(S.team.name)}</div><div class="pts">${b.us}</div></div>
-          <div class="sep">–</div>
-          <div><div class="tm">${esc(g.opp)}</div><div class="pts">${b.them}</div></div>
-        </div>
-        <div class="clockrow">
+  const a=(k,lbl,sub)=>`<button class="act ${ACTIONS[k].cls} ${S.armed===k?"armed":""}" data-a="act" data-v="${k}">${ico(k)}<span class="al">${lbl||ACTIONS[k].l}</span>${sub?`<small>${sub}</small>`:""}</button>`;
+  const last=g.events[g.events.length-1];
+  let hint;
+  if(S.sel){const r=b.rows[S.sel]||finish(emptyRow());hint=`<b>${esc(pName(S.sel))}</b> <span class="muted">${r.pts}pts · ${r.reb}reb · ${r.ast}pd · ${r.pf}F</span> → action`}
+  else if(S.armed)hint=`<b>${ACTIONS[S.armed].lg}</b> → choisis le joueur`;
+  else if(last)hint=`<span class="muted">Dernier :</span> ${last.p==="opp"?esc(g.opp):esc(pName(last.p))} · ${ACTIONS[last.a]?ACTIONS[last.a].lg:last.a}`;
+  else hint=`<span class="muted">Joueur puis action, ou l'inverse</span>`;
+  const chip=id=>{const p=player(id)||{num:"?",name:"?"},r=b.rows[id]||finish(emptyRow());
+    return `<button class="chip ${S.sel===id?"sel":""} ${r.pf>=5?"f5":r.pf>=4?"f4":""}" data-a="pick" data-v="${id}"><b>${esc(p.num)}</b> ${esc(p.name)}${r.pf?` <i>${r.pf}F</i>`:""}</button>`};
+  return `<div class="lv">
+    <div class="lv-top">
+      <div class="lv-score">
+        <div class="lv-team"><span class="tm">${esc(S.team.name)}</span><span class="pts">${b.us}</span></div>
+        <div class="lv-mid">
           <button class="clock ${run?"run":""}" id="clk" data-a="editClock" aria-label="Régler le chrono">${mmss(remaining(g,now),true)}</button>
-          <div class="qsel">${qb}</div>
           <button class="play ${run?"run":""}" data-a="clock" aria-label="${run?"Pause":"Démarrer"}">${run?"❚❚":"▶"}</button>
         </div>
-        <div class="tf">Fautes d'équipe ${qLabel(q)} : <b class="${qf>=4?"bonus":""}">${qf}</b>${qf>=4?" · adv. en bonus":""}</div>
+        <div class="lv-team r"><span class="tm">${esc(g.opp)}</span><span class="pts">${b.them}</span></div>
       </div>
-      <div class="card">
-        <div class="grplbl"><span>Sur le terrain (${court.length})</span><button class="btn sm ghost" data-a="subs">⇄ Changements</button></div>
-        <div class="players">${court.map(id=>plTile(g,b,id,now)).join("")||`<div class="muted small" style="grid-column:1/-1">Personne. Tape « Changements » pour choisir le 5 de départ.</div>`}</div>
-        ${bench.length?`<div class="grplbl" style="margin-top:10px"><span>Banc</span></div><div class="players">${bench.map(id=>plTile(g,b,id,now)).join("")}</div>`:""}
-      </div>
-      <div class="card">
-        <div class="quick">
-          <button class="ob" data-a="act" data-v="o1"><small>ADV</small>+1</button>
-          <button class="ob" data-a="act" data-v="o2"><small>ADV</small>+2</button>
-          <button class="ob" data-a="act" data-v="o3"><small>ADV</small>+3</button>
-          <button class="ub" data-a="undo" ${g.events.length?"":"disabled"}>↶ Annuler</button>
-        </div>
+      <div class="lv-sub">
+        <div class="qsel">${qb}</div>
+        <span class="tfx ${qf>=4?"bonus":""}">F ${qf}${qf>=4?" · bonus":""}</span>
+        <span class="${syncCls||"dot"}" id="liveDot"></span>
+        <button class="menu" data-a="liveMenu" aria-label="Menu du match">⋯</button>
       </div>
     </div>
-    <div>
-      <div class="card sheet ${S.sel?"open":""}">
-        <div class="grab"></div>
-        ${head}
-        <div class="padlbl">Tirs</div>
-        <div class="pad2">${a("sm","réussi · placer").replace('class="act','class="act big')}${a("sx","raté · placer").replace('class="act','class="act big')}${a("1m","LF réussi")}${a("1x","LF raté")}</div>
-        <div class="padlbl">Autres</div>
-        <div class="pad">${a("dr")}${a("or")}${a("as")}${a("st")}${a("bk")}${a("to")}${a("pf")}</div>
-      </div>
-      <div class="card">
-        <h2>Journal <span class="muted small">(${g.events.length})</span></h2>
-        <ul class="log">${evs.map(e=>`<li><span class="q">${qLabel(e.q||1)}${e.t!=null?" "+mmss(e.t,true):""}</span><span>${e.p==="opp"?`<span class="muted">${esc(g.opp)}</span>`:esc(pName(e.p))} · ${ACTIONS[e.a]?ACTIONS[e.a].lg:e.a}</span><button class="x" data-a="delEv" data-v="${e.id}" aria-label="Supprimer">×</button></li>`).join("")||`<li class="muted">Rien pour l'instant.</li>`}</ul>
-      </div>
-      <div class="endbar">
-        <button class="btn ghost" data-a="viewGame" data-v="${g.id}">Feuille de stats</button>
-        <button class="btn" data-a="endGame">Terminer le match</button>
-      </div>
+    <div class="lv-court">${court.map(id=>plTile(g,b,id,now)).join("")||`<button class="pl empty5" data-a="subs">Choisir le 5 de départ</button>`}</div>
+    <div class="lv-bench"><button class="chip chgt" data-a="subs">⇄ Chgt</button>${bench.map(chip).join("")}</div>
+    <div class="lv-hint">${hint}</div>
+    <div class="lv-pad">
+      ${a("sm","Tir ✓","réussi")}${a("sx","Tir ✗","raté")}${a("1m","LF ✓")}${a("1x","LF ✗")}
+      ${a("dr")}${a("or")}${a("as")}${a("st")}
+      ${a("bk")}${a("to")}${a("pf")}<button class="act ot2" data-a="logModal">${ico("log")}<span class="al">Journal</span><small>${g.events.length}</small></button>
     </div>
-  </div>
-  <div class="scrim ${S.sel?"on":""}" data-a="desel"></div>`;
+    <div class="lv-opp">
+      <button class="ob" data-a="act" data-v="o1"><small>ADV</small>+1</button>
+      <button class="ob" data-a="act" data-v="o2"><small>ADV</small>+2</button>
+      <button class="ob" data-a="act" data-v="o3"><small>ADV</small>+3</button>
+      <button class="ub" data-a="undo" ${g.events.length?"":"disabled"}>↶ Annuler</button>
+    </div>
+  </div>`;
+}
+function logModal(){
+  const g=S.games[S.cur];if(!g)return;
+  const evs=(g.events||[]).slice(-80).reverse();
+  modal(`<h2>Journal <span class="muted small">(${g.events.length})</span></h2>
+    <ul class="log" style="max-height:60vh">${evs.map(e=>`<li><span class="q">${qLabel(e.q||1)}${e.t!=null?" "+mmss(e.t,true):""}</span><span>${e.p==="opp"?`<span class="muted">${esc(g.opp)}</span>`:esc(pName(e.p))} · ${ACTIONS[e.a]?ACTIONS[e.a].lg:e.a}</span><button class="x" data-a="delEv" data-v="${e.id}" aria-label="Supprimer">×</button></li>`).join("")||`<li class="muted">Rien pour l'instant.</li>`}</ul>
+    <button class="btn ghost block" style="margin-top:10px" data-a="closeModal">Fermer</button>`);
+}
+function liveMenu(){
+  const g=S.games[S.cur];if(!g)return;
+  modal(`<h2>${esc(S.team.name)} – ${esc(g.opp)}</h2>
+    <div style="display:grid;gap:8px;margin-top:10px">
+      <button class="btn ghost block" data-a="logModal">📋 Journal des actions</button>
+      <button class="btn ghost block" data-a="subs">⇄ Changements</button>
+      <button class="btn ghost block" data-a="toggleChains">⚡ Enchaînements auto : <b>${chainsOn()?"activés":"désactivés"}</b></button>
+      <button class="btn ghost block" data-a="viewGame" data-v="${g.id}">📊 Feuille de stats</button>
+      <button class="btn block" data-a="endGame">🏁 Terminer le match</button>
+      <button class="btn ghost block" data-a="closeModal">Fermer</button>
+    </div>`);
 }
 
 function vGames(){
@@ -663,7 +743,10 @@ function statTable(entries,div,withGp,extraRow){
 function vStats(){
   const games=sortedGames().filter(g=>(g.events||[]).length);
   const opts=`<option value="season" ${S.statsSel==="season"?"selected":""}>Saison (tous les matchs)</option>`+games.map(g=>`<option value="${g.id}" ${S.statsSel===g.id?"selected":""}>${fmtDate(g.date)} · ${g.home?"vs":"@"} ${esc(g.opp)}</option>`).join("");
-  const top=`<div class="card"><select data-a="statsSel">${opts}</select></div>`;
+  const simOpt=S.simGame?`<option value="__sim" ${S.statsSel==="__sim"?"selected":""}>🎲 Simulation (non enregistrée)</option>`:"";
+  const top=`<div class="card"><select data-a="statsSel">${opts}${simOpt}</select>
+    <button class="btn ghost block" style="margin-top:8px" data-a="simulate">🎲 Simuler un match de 40 min</button></div>`;
+  if(S.statsSel==="__sim"&&S.simGame)return top+vGameStats(S.simGame);
   if(!games.length)return top+`<div class="card empty">Pas encore de stats. Lance un match et saisis quelques actions.</div>`;
   if(S.statsSel!=="season"&&S.games[S.statsSel])return top+vGameStats(S.games[S.statsSel]);
   const s=season(),n=s.n,t=s.team,sg=v=>(v>0?"+":"")+v.toFixed(1);
@@ -691,7 +774,7 @@ function vGameStats(g){
   const b=box(g),qs=Object.keys(b.qs).map(Number).sort((a,c)=>a-c);
   const entries=Object.entries(b.rows).map(([id,r])=>({id,r}));
   const totRow=`<tr class="tot"><td>Équipe</td>${COLS.map(([c])=>`<td>${cell(b.tot,c,0)}</td>`).join("")}</tr>`;
-  return `<div class="card">
+  return `${g.sim?`<div class="banner">🎲 Simulation : match fictif de 4 × 10 min avec ton effectif actuel. Rien n'est enregistré, les vraies stats ne sont pas touchées.</div>`:""}<div class="card">
       <div class="score"><div><div class="tm">${esc(S.team.name)}</div><div class="pts">${b.us}</div></div><div class="sep">–</div><div><div class="tm">${esc(g.opp)}</div><div class="pts">${b.them}</div></div></div>
       <p class="small muted" style="text-align:center;margin:6px 0 10px">${fmtDate(g.date)} · ${g.home?"Domicile":"Extérieur"}${g.status!=="done"?" · en cours":""}</p>
       <div class="tbl"><table><tr><th></th>${qs.map(q=>`<th>${qLabel(q)}</th>`).join("")}<th>Total</th></tr>
@@ -701,12 +784,12 @@ function vGameStats(g){
     ${shotCard([g],Object.keys(b.rows))}
     <div class="card"><h2>Feuille de stats</h2>${statTable(entries,false,false,totRow)}
       ${b.hasMin?"":`<p class="small muted">Pas de temps de jeu sur ce match (chrono non utilisé).</p>`}</div>
-    <div class="endbar">
+    ${g.sim?`<div class="endbar"><button class="btn acc" data-a="simulate">🎲 Relancer</button><button class="btn ghost" data-a="simClose">Fermer</button></div>`:`<div class="endbar">
       <button class="btn ghost" data-a="copyGame" data-v="${g.id}">Copier le résumé</button>
       ${g.status!=="done"?`<button class="btn acc" data-a="openLive" data-v="${g.id}">Reprendre</button>`:`<button class="btn ghost" data-a="reopen" data-v="${g.id}">Corriger</button>`}
       <button class="btn ghost" data-a="csv">Exporter CSV</button>
       <button class="btn ghost" style="color:var(--ko)" data-a="askDel" data-v="${g.id}">Supprimer</button>
-    </div>`;
+    </div>`}`;
 }
 
 function vTeam(){
@@ -944,6 +1027,75 @@ function download(name,txt){
     setTimeout(()=>URL.revokeObjectURL(url),4000);toast("Export téléchargé")}catch(e){copyText(txt.slice(1),"CSV copié")}
 }
 
+/* ---------- Simulation de match (locale, jamais enregistrée) ---------- */
+function rnd(a,b){return a+Math.random()*(b-a)}
+function pickW(arr,w){const tot=arr.reduce((s,x)=>s+w(x),0);let r=Math.random()*tot;for(const x of arr){r-=w(x);if(r<=0)return x}return arr[arr.length-1]}
+function simShotPos(kind){
+  for(let i=0;i<40;i++){
+    let x,y;
+    if(kind==="rq"){x=rnd(52,98);y=rnd(3,56)}
+    else{const d=kind==="mid"?rnd(22,64):rnd(69,78),ang=rnd(-88,88)*Math.PI/180;x=BX+d*Math.sin(ang);y=BY+d*Math.cos(ang)}
+    if(x<1||x>149||y<1||y>139)continue;
+    const three=isThree(x,y),paint=Math.abs(x-BX)<=24.5&&y<=58;
+    if(kind==="3"&&three||kind==="rq"&&paint||kind==="mid"&&!three&&!paint)return{x:Math.round(x*10)/10,y:Math.round(y*10)/10};
+  }
+  return null;
+}
+function simulateGame(){
+  const roster=S.team.players.filter(p=>!p.off);
+  const ids=roster.map(p=>p.id);
+  const R={};ids.forEach(id=>R[id]=rnd(0.7,1.35));                      // niveau aléatoire de chaque joueur
+  const sorted=ids.slice().sort((a,b)=>R[b]-R[a]);
+  const target={};let tw=0;sorted.forEach((id,i)=>{const w=R[id]*(i<5?1.6:1);target[id]=w;tw+=w});
+  ids.forEach(id=>target[id]=Math.min(34*60,target[id]/tw*200*60));     // minutes visées (200 min-joueur au total)
+  const g={id:"__sim",sim:true,opp:"Adversaire simulé",date:today(),home:true,players:ids,events:[],q:4,qLen:10,otLen:5,
+    clock:{run:false,last:0},qEl:{},min:{},oc:[],status:"done"};
+  const played={},pf={};ids.forEach(id=>{played[id]=0;pf[id]=0});
+  const chooseFive=()=>ids.filter(id=>pf[id]<5).sort((a,b)=>(target[b]-played[b])-(target[a]-played[a])).slice(0,5);
+  const ev=(p,a,q,t,extra)=>{if(a==="pf")pf[p]++;const e=Object.assign({id:uid(),p,a,q,ts:0,t:Math.max(0,t)*1000},extra||{});if(PTS[a])e.oc=oc.slice();g.events.push(e)};
+  let oc=[];
+  for(let q=1;q<=4;q++){
+    let t=600,nextSub=600-rnd(150,210);oc=chooseFive();let ours=Math.random()<.5;
+    while(t>0){
+      const dur=Math.min(t,rnd(11,22));
+      oc.forEach(id=>played[id]+=dur);t-=dur;
+      if(ours){
+        const sh=pickW(oc,id=>R[id]*R[id]);
+        if(Math.random()<.13){ev(Math.random()<.85?sh:pickW(oc,()=>1),"to",q,t)}
+        else{
+          const r3=Math.random(),kind=r3<.34?"3":r3<.72?"rq":"mid";
+          const base={"3":.31,"rq":.55,"mid":.38}[kind]*(0.8+0.25*R[sh]);
+          const pos=simShotPos(kind),three=pos?isThree(pos.x,pos.y):kind==="3";
+          const made=Math.random()<base;
+          if(Math.random()<.12&&!made){ // faute subie au tir → 2 LF
+            ev(sh,"1"+(Math.random()<.72?"m":"x"),q,t);ev(sh,"1"+(Math.random()<.72?"m":"x"),q,t);
+          }else{
+            ev(sh,(three?"3":"2")+(made?"m":"x"),q,t,pos||null);
+            if(made){if(Math.random()<.55){const as=oc.filter(i=>i!==sh);ev(pickW(as,id=>R[id]),"as",q,t)}}
+            else if(Math.random()<.28){ev(pickW(oc,id=>R[id]),"or",q,t);ours=!ours}
+          }
+        }
+      }else{
+        if(Math.random()<.24)ev(pickW(oc,id=>1/R[id]),"pf",q,t);
+        const r=Math.random();
+        if(r<.12){if(Math.random()<.6)ev(pickW(oc,id=>R[id]),"st",q,t)}
+        else if(r<.19){ev("opp",Math.random()<.72?"o1":"o1x",q,t);if(Math.random()<.72)ev("opp","o1",q,t)}
+        else{
+          const three=Math.random()<.35,made=Math.random()<(three?.33:.47);
+          if(made)ev("opp",three?"o3":"o2",q,t);
+          else{if(Math.random()<.06)ev(pickW(oc,id=>R[id]),"bk",q,t);if(Math.random()<.72)ev(pickW(oc,id=>R[id]),"dr",q,t)}
+        }
+      }
+      // fautes : on suit les cumuls, sortie à 5
+      if(oc.some(id=>pf[id]>=5)||t<=nextSub){oc=chooseFive();nextSub=t-rnd(150,210)}
+      ours=!ours;
+    }
+    g.qEl[q]=600000;
+  }
+  g.events=g.events.filter(e=>e.a!=="o1x");
+  ids.forEach(id=>g.min[id]=Math.round(played[id])*1000);
+  return g;
+}
 /* ---------- Actions ---------- */
 function commitEv(p,a,extra){
   const g=S.games[S.cur];if(!g)return;
@@ -954,7 +1106,7 @@ function commitEv(p,a,extra){
 }
 function record(a){
   const g=S.games[S.cur];if(!g||!canWrite)return;
-  if(a[0]==="o"){commitEv("opp",a);toast(`${g.opp} +${a[1]}`);render();return}
+  if(/^o[123]$/.test(a)){commitEv("opp",a);toast(`${g.opp} +${a[1]}`);render();return}
   if(!S.sel){S.armed=S.armed===a?null:a;render();return}
   if(a==="sm"||a==="sx"){S.pendingShot={p:S.sel,made:a==="sm"};S.armed=null;courtModal();return}
   const who=pName(S.sel);commitEv(S.sel,a);S.sel=null;S.armed=null;
@@ -966,6 +1118,21 @@ function finishShot(three,pos){
   commitEv(ps.p,a,pos||null);
   toast(`${pName(ps.p)} · ${three?"3":"2"} pts ${ps.made?"✓":"✗"}${pos?" · "+ZONES[zoneOf(pos.x,pos.y)].n:""}`);
   S.pendingShot=null;S.sel=null;S.armed=null;closeModal();render();
+  if(chainsOn())chainPrompt(ps.made?"ast":"reb",ps.p,three);
+}
+/* Enchaînements : après un panier → passe décisive ? / après un tir raté → rebond ? */
+function chainsOn(){try{return localStorage.getItem("bbstats_chains")!=="0"}catch(e){return true}}
+function chainPrompt(kind,shooter,three){
+  const g=S.games[S.cur];if(!g)return;
+  const byNum=(a,c)=>(+(player(a)||{}).num||0)-(+(player(c)||{}).num||0);
+  let pool=(g.oc&&g.oc.length?g.oc:g.players||[]).slice().sort(byNum);
+  if(kind==="ast")pool=pool.filter(id=>id!==shooter);
+  if(!pool.length)return;
+  const sp=player(shooter)||{num:"?",name:"?"};
+  modal(`<h2>${kind==="ast"?"🅰️ Passe décisive ?":"🔁 Rebond ?"}</h2>
+    <p class="small muted" style="margin:0">${kind==="ast"?`Panier à ${three?3:2} de #${esc(sp.num)} ${esc(sp.name)} : qui a fait la passe ?`:`Tir raté de #${esc(sp.num)} ${esc(sp.name)} : qui prend le rebond ?`}</p>
+    <div class="subs chain">${pool.map(id=>{const p=player(id)||{num:"?",name:"?"};return `<button data-a="chain" data-k="${kind}" data-v="${id}"><b>${esc(p.num)}</b><span>${esc(p.name)}</span></button>`}).join("")}</div>
+    <div class="endbar" style="margin:0">${kind==="reb"?`<button class="btn ghost" data-a="closeModal">Rebond adverse</button><button class="btn ghost" data-a="closeModal">Passer</button>`:`<button class="btn ghost" data-a="closeModal" style="grid-column:1/-1">Pas de passe</button>`}</div>`);
 }
 function pick(id){
   if(S.armed){S.sel=id;record(S.armed);return}
@@ -997,13 +1164,17 @@ document.addEventListener("click",e=>{
       if(S.subStart&&g.oc.length&&remaining(g,now)>0){g.clock.run=true;g.clock.last=now;grabWake()}
       touch(g.id);S.sel=null;closeModal();render();toast(g.oc.length===5?"Changements enregistrés":`Attention : ${g.oc.length} joueurs sur le terrain`)}break;
     case"undo":if(g&&g.events.length){const ev=g.events.pop();toast("Annulé : "+(ACTIONS[ev.a]||{}).lg);touch(g.id);render()}break;
-    case"delEv":if(g){g.events=g.events.filter(x=>x.id!==v);touch(g.id);render()}break;
+    case"delEv":if(g){g.events=g.events.filter(x=>x.id!==v);touch(g.id);el.closest("li")&&el.closest("li").remove();needRender=true}break;
+    case"logModal":logModal();break;
+    case"chain":{const k=el.dataset.k;commitEv(v,k==="ast"?"as":"or");toast(`${pName(v)} · ${k==="ast"?"Passe décisive":"Rebond offensif"}`);closeModal();render()}break;
+    case"toggleChains":{try{localStorage.setItem("bbstats_chains",chainsOn()?"0":"1")}catch(e){}toast(chainsOn()?"Enchaînements activés":"Enchaînements désactivés");liveMenu()}break;
+    case"liveMenu":liveMenu();break;
     case"endGame":if(g)modal(`<h2>Terminer le match ?</h2><p class="muted">Le chrono s'arrête. Tu pourras toujours corriger le match ensuite depuis l'historique.</p>
       <div class="endbar" style="margin:0"><button class="btn ghost" data-a="closeModal">Annuler</button><button class="btn acc" data-a="confirmEnd">Terminer</button></div>`);break;
     case"confirmEnd":if(g){stopClock(g,now);g.status="done";touch(g.id);S.statsSel=g.id;S.cur=null;saveLocal();closeModal();S.view="stats";render();window.scrollTo(0,0)}break;
     case"openLive":S.cur=v;S.view="live";S.sel=null;S.armed=null;saveLocal();render();window.scrollTo(0,0);break;
     case"reopen":{const x=S.games[v];if(x&&canWrite){x.status="live";touch(v);S.cur=v;S.view="live";saveLocal();render();window.scrollTo(0,0)}}break;
-    case"viewGame":S.statsSel=v;S.view="stats";render();window.scrollTo(0,0);break;
+    case"viewGame":closeModal();S.statsSel=v;S.view="stats";render();window.scrollTo(0,0);break;
     case"dpl":{const i=S.draft.players.indexOf(v);if(el.checked){if(i<0)S.draft.players.push(v)}else if(i>=0)S.draft.players.splice(i,1);
       const sp=document.getElementById("dplCount");if(sp)sp.textContent=`Joueurs sur la feuille (${S.draft.players.length})`}break;
     case"createGame":{
@@ -1019,6 +1190,9 @@ document.addEventListener("click",e=>{
       <div class="endbar" style="margin:0"><button class="btn ghost" data-a="closeModal">Annuler</button><button class="btn danger" data-a="confirmDel" data-v="${v}">Supprimer</button></div>`);break;
     case"confirmDel":delete S.games[v];dirty.delete(v);tomb.add(v);if(S.cur===v)S.cur=null;S.statsSel="season";saveLocal();schedule(v,0);closeModal();render();break;
     case"sort":S.sortKey=v;render();break;
+    case"simulate":{if(S.team.players.filter(p=>!p.off).length<5){toast("Il faut au moins 5 joueurs dans l'effectif");return}
+      S.simGame=simulateGame();S.statsSel="__sim";S.shotP="";S.view="stats";render();window.scrollTo(0,0);toast("Simulation générée")}break;
+    case"simClose":S.simGame=null;S.statsSel="season";render();window.scrollTo(0,0);break;
     case"courtTap":{const svg=document.getElementById("courtTap"),r=svg.getBoundingClientRect();
       const x=Math.round(((e.clientX-r.left)/r.width*154-2)*10)/10,y=Math.round(((e.clientY-r.top)/r.height*144-2)*10)/10;
       if(x<0||x>150||y<0||y>140)return;finishShot(isThree(x,y),{x,y})}break;
