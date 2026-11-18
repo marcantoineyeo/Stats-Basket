@@ -188,6 +188,97 @@ body.livemode #app{height:calc(100dvh - 62px - var(--sab) - var(--sat) - 6px)}
 .lv-opp .ub{border:1px solid var(--line);border-radius:12px;height:46px;font-weight:700;font-size:14px}
 .lv-opp .ub:disabled{opacity:.35}
 
+/* ---------- ENTRAÎNEMENT ---------- */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.tbig{border:1px solid var(--line);border-radius:12px;padding:12px 6px;font-weight:700;font-size:13px;background:var(--bg);display:flex;flex-direction:column;align-items:center;gap:4px;min-height:84px;justify-content:center;text-align:center;line-height:1.15}
+.tbig span{font-size:22px;line-height:1}
+.tbig.acc{background:var(--acc);color:#fff;border-color:var(--acc)}
+.srow{display:block;width:100%;text-align:left;padding:10px 0;border-bottom:1px solid var(--line)}
+.srow:last-child{border:0}
+.srow-h{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:6px}
+.srow-h b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srow-h span{white-space:nowrap}
+.tl{display:flex;border-radius:6px;overflow:hidden;background:var(--bg)}
+.tl span{display:block;height:100%;border-right:1.5px solid var(--card)}
+.tl span:last-child{border:0}
+.intsvg{width:100%;height:44px;display:block}
+.throw{display:grid;grid-template-columns:110px 1fr 40px;gap:8px;align-items:center;font-size:13px;margin-bottom:6px}
+.thbar{height:10px;background:var(--bg);border-radius:5px;overflow:hidden}
+.thbar i{display:block;height:100%}
+.throw b{text-align:right;font-variant-numeric:tabular-nums}
+.back{font-weight:700;color:var(--acc);padding:6px 2px 10px;font-size:14px}
+.blk{display:grid;grid-template-columns:5px 1fr auto;grid-template-rows:auto auto;gap:4px 8px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center}
+.blk:last-of-type{border-bottom:0}
+.blk>i{grid-row:1/3;align-self:stretch;border-radius:3px}
+.blk-m{min-width:0;cursor:pointer}
+.blk-m b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.blk-m span{display:block}
+.blk-t{display:flex;align-items:center;gap:4px}
+.blk-t button,.blk-o button{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);font-weight:800;font-size:16px}
+.blk-t b{min-width:34px;text-align:center;font-variant-numeric:tabular-nums}
+.blk-o{grid-column:2/4;display:flex;gap:6px;justify-content:flex-end}
+.blk-o button:disabled{opacity:.3}
+.chips{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.cdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.badge{display:inline-block;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.dcard{display:grid;grid-template-columns:86px 1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;margin-bottom:8px}
+.dthumb{width:86px;cursor:pointer}
+.dthumb svg{width:100%;height:auto;display:block;border-radius:6px}
+.dthumb .nothumb{height:80px;display:grid;place-items:center;font-size:28px;background:var(--bg);border-radius:6px}
+.dinfo{display:flex;flex-direction:column;gap:3px;min-width:0;cursor:pointer}
+.dinfo .badge{align-self:flex-start}
+.dinfo>span:last-child{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dadd{width:44px;height:44px;border-radius:12px;background:var(--acc);color:#fff;font-size:22px;font-weight:800}
+.dgwrap{margin-top:10px}
+#diag{max-width:420px;margin:0 auto}
+#diag svg{width:100%;height:auto;display:block;border-radius:10px}
+.court.dg .dgt{font:800 4.6px system-ui,sans-serif;text-anchor:middle}
+.court.dg .dgt.w{fill:#fff}.court.dg .dgt.b{fill:#1d4ed8;font-size:4px}
+.court.dg .ar{fill:none;stroke:#1f2937;stroke-width:.9}
+.court.dg .ar.p{stroke-dasharray:2.2 1.6}
+.court.dg .ar.s{stroke:#ea580c;stroke-dasharray:.8 1.4;stroke-width:1.1}
+.dgctl{display:flex;gap:10px;justify-content:center;margin-top:8px}
+.dgctl button{width:52px;height:44px;border-radius:12px;border:1px solid var(--line);font-size:17px;font-weight:800}
+.dgctl #diagPlay{background:var(--acc);color:#fff;border-color:var(--acc)}
+.legend{text-align:center;margin:6px 0 0;line-height:1.6}
+.lg{font-weight:800}.lg.o{color:#ea580c}.lg.x{color:#1d4ed8}.lg.c{color:#111827}.lg.k{color:#f97316}
+.dl{margin:0;padding-left:20px}.dl li{margin-bottom:5px}
+.yt{position:relative;padding-top:56.25%;margin-top:10px;border-radius:10px;overflow:hidden;background:#000}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;resize:vertical}
+.tgrp{border-left:4px solid;padding:6px 10px;margin-bottom:6px;background:var(--bg);border-radius:8px;font-size:14px}
+.tgrp b{display:block}
+.stars{display:flex;gap:6px;justify-content:center;margin:6px 0 12px}
+.stars button{font-size:34px;color:var(--line);line-height:1}
+.stars button.on{color:#f59e0b}
+/* Mode terrain */
+body.runmode{overflow:hidden}
+body.runmode header.top,body.runmode #banner,body.runmode nav.tabs{display:none}
+body.runmode .wrap{padding:calc(6px + var(--sat)) 10px calc(6px + var(--sab));max-width:640px}
+.run{height:calc(100dvh - 12px - var(--sat) - var(--sab));display:flex;flex-direction:column;gap:7px}
+.run-top{display:flex;align-items:center;gap:8px}
+.run-top .menu{width:40px;height:40px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-size:17px}
+.run-ti{flex:1;min-width:0;text-align:center}
+.run-ti b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.run-name{font-size:18px;font-weight:800;border-left:5px solid;padding-left:9px}
+.run-timer{text-align:center}
+.run-timer span{font-size:64px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.run-prog{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:6px}
+.run-prog i{display:block;height:100%}
+.run-dg{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.run-dg #diag{max-height:100%;max-width:min(420px,100%);width:100%}
+.run-dg #diag svg{max-height:calc(100dvh - 420px);width:auto;margin:0 auto}
+.run-txt{flex:1;display:grid;place-items:center;text-align:center;font-size:16px;color:var(--mute)}
+.run-keys{margin:0;padding-left:20px;font-size:14px}
+.run-ctl{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:8px}
+.run-ctl button{height:64px;border-radius:16px;border:1px solid var(--line);background:var(--card);font-size:22px;font-weight:800}
+.run-ctl button.big{background:var(--ok);color:#fff;border-color:var(--ok);font-size:28px}
+.run-ctl button.big.on{background:var(--ko);border-color:var(--ko)}
+.run-ctl button:disabled{opacity:.3}
+.run-next{text-align:center}
+@media (max-width:380px){.tgrid{grid-template-columns:1fr 1fr 1fr}.tbig{font-size:12px}}
+
 /* ---------- TABLES ---------- */
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -12px;padding:0 12px}
 table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
@@ -358,14 +449,14 @@ function inviteLink(){const u=new URL(location.href);u.search="";u.hash="";u.sea
 
 /* ---------- Persistance locale ---------- */
 function loadLocal(){
-  S.team={name:"Mon équipe",players:[],qLen:10,otLen:5,updatedAt:0};S.games={};dirty=new Set();tomb=new Set();S.cur=null;
+  S.team={name:"Mon équipe",players:[],qLen:10,otLen:5,updatedAt:0};S.games={};S.sessions={};S.drills={};dirty=new Set();tomb=new Set();S.cur=null;
   try{
     const r=JSON.parse(localStorage.getItem(lsKey())||"null");
-    if(r){S.team=Object.assign(S.team,r.team||{});S.games=r.games||{};dirty=new Set(r.dirty||[]);tomb=new Set(r.tomb||[]);S.cur=r.cur||null}
+    if(r){S.team=Object.assign(S.team,r.team||{});S.games=r.games||{};S.sessions=r.sessions||{};S.drills=r.drills||{};dirty=new Set(r.dirty||[]);tomb=new Set(r.tomb||[]);S.cur=r.cur||null}
   }catch(e){}
 }
 function saveLocal(){
-  try{localStorage.setItem(lsKey(),JSON.stringify({team:S.team,games:S.games,dirty:[...dirty],tomb:[...tomb],cur:S.cur}))}catch(e){}
+  try{localStorage.setItem(lsKey(),JSON.stringify({team:S.team,games:S.games,sessions:S.sessions,drills:S.drills,dirty:[...dirty],tomb:[...tomb],cur:S.cur}))}catch(e){}
 }
 
 /* ---------- Synchro Firebase ---------- */
@@ -380,10 +471,12 @@ function setSync(st){
   const ld=document.getElementById("liveDot");if(ld)ld.className=syncCls;
   t.textContent={ok:"Synchronisé",off:"Hors-ligne · sauvé ici",ro:"Accès refusé",full:"Quota atteint",local:"Mode local",wait:"Connexion…"}[st]||"";
 }
-function ref(key){return key==="team"?FS.doc(db,"teams",teamCode,"meta","info"):FS.doc(db,"teams",teamCode,"games",key)}
+// Clés de synchro : "team", <idMatch>, "s:<idSéance>", "d:<idExercice perso>"
+function bucket(key){if(key.startsWith("s:"))return["sessions",S.sessions,key.slice(2)];if(key.startsWith("d:"))return["drills",S.drills,key.slice(2)];return["games",S.games,key]}
+function getObj(key){if(key==="team")return S.team;const b=bucket(key);return b[1][b[2]]}
+function ref(key){if(key==="team")return FS.doc(db,"teams",teamCode,"meta","info");const b=bucket(key);return FS.doc(db,"teams",teamCode,b[0],b[2])}
 function touch(key){
-  const now=Date.now();
-  if(key==="team")S.team.updatedAt=now;else if(S.games[key])S.games[key].updatedAt=now;
+  const now=Date.now(),o=getObj(key);if(o)o.updatedAt=now;
   dirty.add(key);saveLocal();schedule(key);
 }
 function schedule(key,delay){
@@ -394,13 +487,13 @@ function schedule(key,delay){
 async function flush(key){
   const s=wq[key];if(s.busy){s.again=true;return}
   s.busy=true;s.again=false;
-  const body=key==="team"?S.team:S.games[key];
+  const body=getObj(key);
   const sentAt=body?body.updatedAt:0;
   try{
     if(tomb.has(key)){await FS.deleteDoc(ref(key));tomb.delete(key);dirty.delete(key)}
     else if(body){
       await FS.setDoc(ref(key),clone(body));
-      const now=key==="team"?S.team:S.games[key];
+      const now=getObj(key);
       if(now&&now.updatedAt===sentAt)dirty.delete(key);
     }
     saveLocal();if(!dirty.size&&!tomb.size)setSync("ok");
@@ -450,16 +543,19 @@ async function initCloud(){
     if(loaded&&!dirty.size&&!tomb.size&&canWrite)setSync("ok");
     else if(snap.metadata.fromCache&&loaded)setSync("off");
   },e=>{setSync(e&&e.code==="permission-denied"?"ro":"off")}));
-  unsubs.push(FS.onSnapshot(FS.collection(db,"teams",teamCode,"games"),snap=>{
-    const seen=new Set();
+  const listen=(coll,getMap,pre)=>unsubs.push(FS.onSnapshot(FS.collection(db,"teams",teamCode,coll),snap=>{
+    const map=getMap(),seen=new Set();
     snap.docs.forEach(d=>{
-      seen.add(d.id);if(tomb.has(d.id))return;
-      const r=d.data(),l=S.games[d.id];
-      if(!l||!dirty.has(d.id)||(r.updatedAt||0)>(l.updatedAt||0)){S.games[d.id]=clone(r);dirty.delete(d.id)}
+      const k=pre+d.id;seen.add(d.id);if(tomb.has(k))return;
+      const r=d.data(),l=map[d.id];
+      if(!l||!dirty.has(k)||(r.updatedAt||0)>(l.updatedAt||0)){map[d.id]=clone(r);dirty.delete(k)}
     });
-    if(!snap.metadata.fromCache)Object.keys(S.games).forEach(id=>{if(!seen.has(id)&&!dirty.has(id))delete S.games[id]});
+    if(!snap.metadata.fromCache)Object.keys(map).forEach(id=>{if(!seen.has(id)&&!dirty.has(pre+id))delete map[id]});
     saveLocal();safeRender();
   },()=>setSync("off")));
+  listen("games",()=>S.games,"");
+  listen("sessions",()=>S.sessions,"s:");
+  listen("drills",()=>S.drills,"d:");
   [...dirty,...tomb].forEach(k=>schedule(k,0));
   render();
 }
@@ -560,7 +656,7 @@ function sortVal(r,k){
 }
 
 /* ---------- Rendu ---------- */
-const TABS=[["live","🏀","Match"],["games","📋","Matchs"],["stats","📊","Stats"],["team","👥","Effectif"]];
+const TABS=[["live","🏀","Match"],["games","📋","Matchs"],["stats","📊","Stats"],["train","🗓️","Séances"],["team","👥","Effectif"]];
 function render(){
   document.getElementById("teamTitle").textContent=S.team.name||"Stats Basket";
   document.getElementById("tabs").innerHTML=TABS.map(([k,i,l])=>`<button data-a="tab" data-v="${k}" class="${S.view===k?"on":""}"><span class="ic">${i}</span>${l}</button>`).join("");
@@ -568,7 +664,8 @@ function render(){
   const needJoin=fbConfig()&&!teamCode;
   document.getElementById("tabs").style.display=needJoin?"none":"";
   document.body.classList.toggle("livemode",!needJoin&&S.view==="live"&&!!S.games[S.cur]);
-  document.getElementById("app").innerHTML=needJoin?vJoin():({live:vLive,games:vGames,stats:vStats,team:vTeam})[S.view]();
+  document.getElementById("app").innerHTML=needJoin?vJoin():({live:vLive,games:vGames,stats:vStats,team:vTeam,train:vTrain})[S.view]();
+  if(!needJoin)trainAfter();
   tick();
 }
 function renderBanner(){
@@ -1246,6 +1343,666 @@ document.addEventListener("keydown",e=>{
   else if(t.dataset.d==="opp"||t.dataset.a==="teamName"){t.blur()}
   else if(t.id==="joinCode"){e.preventDefault();document.querySelector('[data-a="joinOK"]').click()}
   else if(t.id==="newTeam"){e.preventDefault();document.querySelector('[data-a="createOK"]').click()}
+});
+
+/* =====================================================================
+   MODULE ENTRAÎNEMENT
+   ===================================================================== */
+/* ---------- Thèmes ---------- */
+const THEMES={
+  echauf:{n:"Échauffement",c:"#f59e0b"},drib:{n:"Dribble",c:"#8b5cf6"},passe:{n:"Passe",c:"#0ea5e9"},
+  tir:{n:"Tir",c:"#16a34a"},fin:{n:"Finitions",c:"#65a30d"},def:{n:"Défense",c:"#dc2626"},
+  reb:{n:"Rebond",c:"#b45309"},transi:{n:"Transition",c:"#db2777"},collectif:{n:"Jeu collectif",c:"#2563eb"},
+  physique:{n:"Physique",c:"#475569"},calme:{n:"Retour au calme",c:"#94a3b8"}
+};
+const THORDER=["echauf","drib","passe","tir","fin","def","reb","transi","collectif","physique","calme"];
+
+/* ---------- Bibliothèque d'exercices intégrée ----------
+   Schéma : demi-terrain 150×140 (panier en haut, y=15.75) ou terrain entier 150×280.
+   frames : positions (héritées d'une étape à l'autre) + porteur du ballon (b).
+   b:"shot" = tir. Les flèches (course, dribble, passe, tir) sont déduites automatiquement. */
+const DRILLS=[
+{id:"lay-lines",name:"Double-pas en 2 files",theme:"echauf",min:8,players:"6+",int:1,equip:"1 ballon pour 2",
+ summary:"Échauffement classique : double-pas d'un côté, rebond de l'autre, rotation des files.",
+ steps:["Deux files à 45° : tireurs à droite avec les ballons, rebondeurs à gauche.","Le 1er tireur dribble et va au double-pas main droite.","Le rebondeur part en même temps, prend le rebond sans laisser tomber le ballon.","Il passe au tireur suivant et rejoint la file des tireurs."],
+ rot:"Tireur → file des rebondeurs. Rebondeur → file des tireurs. Changer de côté (main gauche) à mi-temps de l'exercice.",
+ keys:["Dernier appui côté main qui tire","Monter haut, ballon protégé","Rebond attrapé à 2 mains, en l'air"],
+ vars:["Lay-back / reverse","Arrêt 2 temps + tir à 2 m","Imposer la main faible"],
+ frames:[
+  {c:"Tireur avec ballon, rebondeur prêt",p:{"1":[118,92],"a":[126,108],"b":[132,122],"2":[32,92],"c":[24,108]},b:"1"},
+  {c:"Dribble vers le panier, le rebondeur coupe",p:{"1":[92,36],"2":[60,34]},b:"1"},
+  {c:"Double-pas",p:{"1":[84,24]},b:"shot"},
+  {c:"Rebond, le tireur file à gauche",p:{"2":[72,26],"1":[28,124]},b:"2"},
+  {c:"Passe au suivant, le rebondeur rejoint les tireurs",p:{"2":[134,132],"a":[118,92],"b":[126,108]},b:"a"}]},
+
+{id:"gammes",name:"Gammes athlétiques",theme:"echauf",min:8,players:"tous",int:1,equip:"aucun",
+ summary:"Mise en route : talons-fesses, montées de genoux, pas chassés, sur la largeur du terrain.",
+ steps:["Les joueurs en ligne sur la ligne de fond.","Aller jusqu'au milieu de terrain avec la consigne du coach.","Retour en trottinant, consigne suivante."],
+ rot:"Par vagues de 4-5 joueurs, la vague suivante part quand la précédente atteint la ligne des LF.",
+ keys:["Gainage, regard devant","Appuis dynamiques sur l'avant du pied","Monter progressivement en intensité"],
+ vars:["Avec ballon : dribble main faible","Finir par des accélérations"],
+ frames:[
+  {c:"Départ ligne de fond",p:{"1":[30,4],"2":[60,4],"3":[90,4],"4":[120,4]}},
+  {c:"Gamme jusqu'au milieu",p:{"1":[30,135],"2":[60,135],"3":[90,135],"4":[120,135]}},
+  {c:"Retour en trottinant",p:{"1":[30,6],"2":[60,6],"3":[90,6],"4":[120,6]}}]},
+
+{id:"slalom",name:"Slalom dribble + finition",theme:"drib",min:10,players:"4+",int:2,equip:"4 plots, 1 ballon/joueur",
+ summary:"Changements de main autour des plots puis finition au cercle.",
+ steps:["Plots en zigzag du milieu de terrain vers le panier.","Changement de main à chaque plot (croisé, entre les jambes, dans le dos).","Finir par un double-pas ou un arrêt + tir."],
+ rot:"Départ toutes les 4 secondes. Le joueur récupère son ballon et revient par l'extérieur.",
+ keys:["Ballon sous la hanche, regard haut","Accélérer après chaque changement de main","Protéger le ballon avec le bras libre"],
+ vars:["2 ballons","Défenseur passif au dernier plot","Chronométré"],
+ frames:[
+  {c:"Départ milieu de terrain",p:{"K1":[75,118],"K2":[55,92],"K3":[95,66],"K4":[62,42],"1":[75,136],"a":[85,138]},b:"1"},
+  {c:"Changement de main au 1er plot",p:{"1":[84,112]},b:"1"},
+  {c:"2e plot",p:{"1":[47,88]},b:"1"},
+  {c:"3e plot",p:{"1":[103,62]},b:"1"},
+  {c:"4e plot puis attaque du cercle",p:{"1":[70,32]},b:"1"},
+  {c:"Finition",p:{"1":[72,22]},b:"shot"}]},
+
+{id:"pass-follow",name:"Passe et suis en triangle",theme:"passe",min:8,players:"6+",int:1,equip:"1 ballon par groupe",
+ summary:"Passes précises et déplacement immédiat : je passe, je suis ma passe.",
+ steps:["Trois files en triangle.","Passe à deux mains poitrine vers la file suivante.","Le passeur court derrière la file à qui il a passé."],
+ rot:"Je passe → je rejoins la file où j'ai passé. Changer de sens et de type de passe toutes les 2 min.",
+ keys:["Pas vers la cible en passant","Mains en cible pour recevoir","Annoncer le prénom du receveur"],
+ vars:["Passe à terre","Passe main faible","2 ballons en même temps"],
+ frames:[
+  {c:"Trois files en triangle",p:{"1":[35,70],"2":[115,70],"3":[75,125],"a":[28,62],"b":[122,62],"c":[75,134]},b:"1"},
+  {c:"1 passe à 2 et suit sa passe",p:{"1":[112,74]},b:"2"},
+  {c:"2 passe à 3 et suit",p:{"2":[78,120]},b:"3"},
+  {c:"3 passe à la file de départ et suit",p:{"3":[38,74]},b:"a"}]},
+
+{id:"give-go",name:"Passe et va (give & go)",theme:"passe",min:10,players:"4+",int:2,equip:"1 ballon pour 2",
+ summary:"Le jeu à deux de base : passe, coupe, je reçois et je finis.",
+ steps:["Meneur en haut, ailier côté droit.","Passe à l'ailier, feinte d'un côté puis coupe vers le panier.","L'ailier redonne en course, le coupeur finit."],
+ rot:"Le meneur prend la place de l'ailier, l'ailier récupère le ballon et va en file meneur.",
+ keys:["Feinte avant de couper","Main cible pendant la coupe","Passe à terre ou à rebond dans la course"],
+ vars:["Ajouter un défenseur passif sur le meneur","Coupe arrière (backdoor)"],
+ frames:[
+  {c:"Meneur en haut, ailier à droite",p:{"1":[75,92],"2":[124,62],"a":[75,104]},b:"1"},
+  {c:"Passe à l'ailier",p:{"1":[66,86]},b:"2"},
+  {c:"Coupe vers le panier",p:{"1":[86,32]},b:"2"},
+  {c:"Passe en course",p:{"1":[82,26]},b:"1"},
+  {c:"Finition",p:{},b:"shot"}]},
+
+{id:"five-spots",name:"Tir 5 spots",theme:"tir",min:12,players:"2-3 par panier",int:2,equip:"1-2 ballons par panier",
+ summary:"Volume de tirs sur 5 positions avec passeur-rebondeur. On compte les réussites.",
+ steps:["Un tireur, un passeur-rebondeur sous le panier.","5 tirs par spot : corner, aile, axe, aile, corner.","Le tireur se déplace en course entre chaque tir."],
+ rot:"Après les 5 spots, le tireur devient rebondeur. Tour complet = 25 tirs.",
+ keys:["Pieds prêts avant de recevoir","Même routine à chaque tir","Le passeur passe dans la poche de tir"],
+ vars:["Tir après dribble","2 points puis 3 points","Objectif chiffré : 15/25"],
+ frames:[
+  {c:"Tireur au corner droit",p:{"1":[140,18],"2":[75,28]},b:"2"},
+  {c:"Passe",p:{},b:"1"},
+  {c:"Tir",p:{},b:"shot"},
+  {c:"Rebond, le tireur file à l'aile",p:{"2":[76,30],"1":[126,74]},b:"2"},
+  {c:"Passe",p:{},b:"1"},
+  {c:"Tir",p:{},b:"shot"},
+  {c:"Rebond, le tireur file dans l'axe",p:{"2":[74,30],"1":[75,96]},b:"2"},
+  {c:"Passe puis tir",p:{},b:"1"}]},
+
+{id:"ft-fatigue",name:"Lancers francs sous fatigue",theme:"tir",min:8,players:"2+ par panier",int:3,equip:"1 ballon par panier",
+ summary:"Sprint puis 2 LF : on reproduit la fatigue du match.",
+ steps:["Le joueur sprinte jusqu'au milieu de terrain et revient.","Il enchaîne 2 lancers francs.","Le partenaire rebondit et compte."],
+ rot:"Tireur ↔ rebondeur après chaque série. 5 séries chacun.",
+ keys:["Respiration avant le 1er LF","Même routine qu'en match","Coude sous le ballon, finir le geste"],
+ vars:["Pompe/gainage à la place du sprint","Pénalité collective si raté"],
+ frames:[
+  {c:"Départ ligne des LF",p:{"1":[75,58],"2":[85,22]}},
+  {c:"Sprint au milieu",p:{"1":[75,136]}},
+  {c:"Retour aux LF",p:{"1":[75,60]},b:"1"},
+  {c:"Lancer franc",p:{},b:"shot"},
+  {c:"Rebond",p:{"2":[78,24]},b:"2"}]},
+
+{id:"mikan",name:"Mikan drill",theme:"fin",min:5,players:"1 par panier",int:2,equip:"1 ballon par panier",
+ summary:"Finitions alternées main droite / main gauche sous le cercle, sans dribble.",
+ steps:["Sous le panier, ballon en main.","Lay-up main droite côté droit, récupérer sans laisser tomber.","Pas croisé, lay-up main gauche côté gauche. Enchaîner."],
+ rot:"30 secondes par joueur puis on change. On compte les paniers.",
+ keys:["Ballon toujours au-dessus des épaules","Jeu de pieds rapide","Utiliser la planche"],
+ vars:["Reverse Mikan (dos au panier)","Avec 2 ballons"],
+ frames:[
+  {c:"Côté droit",p:{"1":[88,22]},b:"1"},
+  {c:"Lay-up main droite",p:{},b:"shot"},
+  {c:"Récupère et passe côté gauche",p:{"1":[62,22]},b:"1"},
+  {c:"Lay-up main gauche",p:{},b:"shot"}]},
+
+{id:"zigzag-def",name:"Zigzag défensif",theme:"def",min:8,players:"tous",int:2,equip:"plots",
+ summary:"Pas glissés en diagonale avec changement de direction : base de la défense sur porteur.",
+ steps:["Départ ligne de fond, position défensive basse.","Pas glissés en diagonale jusqu'au plot, pivot, diagonale opposée.","Aller jusqu'au milieu de terrain."],
+ rot:"Par 2 : un attaquant dribble en zigzag au ralenti, le défenseur le suit. On inverse au retour.",
+ keys:["Ne jamais croiser les pieds","Fesses basses, dos droit","Mains actives"],
+ vars:["Avec attaquant actif sans ballon","Finir par un sprint"],
+ frames:[
+  {c:"Position défensive",p:{"X1":[30,8],"K1":[60,40],"K2":[30,72],"K3":[60,104],"K4":[30,136]}},
+  {c:"Glissés vers le 1er plot",p:{"X1":[58,40]}},
+  {c:"Pivot et diagonale",p:{"X1":[32,72]}},
+  {c:"Diagonale",p:{"X1":[58,104]}},
+  {c:"Jusqu'au milieu",p:{"X1":[32,134]}}]},
+
+{id:"closeout",name:"Closeout + 1c1",theme:"def",min:10,players:"2 par panier",int:3,equip:"1 ballon",
+ summary:"Le défenseur passe, sprinte puis contrôle sa fermeture, et défend le 1c1.",
+ steps:["Le défenseur sous le panier passe à l'attaquant à l'aile.","Course rapide puis pas courts (closeout), main haute.","L'attaquant attaque en 1c1, 2 dribbles maximum."],
+ rot:"Attaquant → défenseur, défenseur → file. On garde le score : 1 pt par stop.",
+ keys:["Sprint 2/3 puis freinage en pas courts","Main haute sur le tir, bassin bas","Couper la ligne de fond"],
+ vars:["L'attaquant a le droit au tir direct","Closeout depuis l'axe"],
+ frames:[
+  {c:"Défenseur sous le panier avec le ballon",p:{"X1":[75,24],"1":[122,72]},b:"X1"},
+  {c:"Passe à l'aile",p:{},b:"1"},
+  {c:"Closeout",p:{"X1":[112,64]},b:"1"},
+  {c:"1c1 : l'attaquant drive",p:{"1":[100,36],"X1":[96,42]},b:"1"},
+  {c:"Tir ou stop",p:{},b:"shot"}]},
+
+{id:"shell",name:"Shell drill 4c4 (aide et rotations)",theme:"def",min:12,players:"8",int:2,equip:"1 ballon",
+ summary:"Les défenseurs ajustent leur position à chaque passe : porteur, côté ballon, côté aide.",
+ steps:["4 attaquants autour de l'arc, 4 défenseurs.","Les attaquants se passent le ballon sans dribbler.","À chaque passe, tous les défenseurs se replacent (saut vers le ballon)."],
+ rot:"Attaque → défense → sortie au bout de 6 stops ou 2 minutes.",
+ keys:["Voir son joueur ET le ballon","Côté aide : un pied dans la raquette","Bouger pendant que le ballon voyage"],
+ vars:["Autoriser la pénétration","Ajouter les écrans retard"],
+ frames:[
+  {c:"Ballon en haut à gauche",p:{"1":[55,96],"2":[95,96],"3":[18,48],"4":[132,48],"X1":[57,84],"X2":[88,76],"X3":[36,50],"X4":[100,46]},b:"1"},
+  {c:"Passe à l'aile droite : tout le monde saute vers le ballon",p:{"X4":[124,52],"X2":[92,86],"X1":[66,66],"X3":[58,40]},b:"2"},
+  {c:"Passe au corner droit",p:{"X4":[126,50],"X2":[98,74],"X1":[64,52],"X3":[66,32]},b:"4"}]},
+
+{id:"boxout",name:"Box-out 3c3",theme:"reb",min:10,players:"6+",int:3,equip:"1 ballon",
+ summary:"Le coach tire, les défenseurs bloquent (écran retard) avant d'aller au rebond.",
+ steps:["3 attaquants autour de la raquette, 3 défenseurs.","Le coach tire.","Chaque défenseur trouve son joueur, contact, bloque, puis prend le rebond."],
+ rot:"La défense reste tant qu'elle prend le rebond (3 fois de suite = sortie). Sinon inversion.",
+ keys:["Voir, toucher, bloquer, aller chercher","Pivot vers l'attaquant","Rebond à 2 mains, coudes sortis"],
+ vars:["4c4","Tir des joueurs à la place du coach"],
+ frames:[
+  {c:"Le coach a le ballon",p:{"C":[75,100],"1":[40,56],"2":[75,72],"3":[110,56],"X1":[46,46],"X2":[75,60],"X3":[104,46]},b:"C"},
+  {c:"Tir du coach",p:{},b:"shot"},
+  {c:"Les défenseurs bloquent",p:{"X1":[44,50],"X2":[75,66],"X3":[106,50],"1":[42,58],"2":[75,74],"3":[108,58]}},
+  {c:"Rebond défensif",p:{"X2":[76,30]},b:"X2"}]},
+
+{id:"2v1",name:"Contre-attaque 2c1",theme:"transi",min:10,players:"3+",int:3,equip:"1 ballon",court:"full",
+ summary:"Deux attaquants contre un défenseur sur tout le terrain : fixer, passer, finir.",
+ steps:["Deux attaquants partent du fond avec le ballon, un défenseur attend en haut de l'autre raquette.","Le porteur attaque le défenseur pour le fixer.","Passe au partenaire libre pour finir au cercle."],
+ rot:"L'attaquant qui finit devient défenseur, les autres repartent en 2c1 dans l'autre sens.",
+ keys:["Rester large (couloirs)","Le porteur attaque le cercle, pas le côté","Passe au bon moment, pas trop tôt"],
+ vars:["3c2 continu","Défenseur qui part en retard"],
+ frames:[
+  {c:"Départ, défenseur en place",p:{"1":[50,252],"2":[112,252],"X1":[75,64]},b:"1"},
+  {c:"Montée de balle en couloirs",p:{"1":[62,140],"2":[118,130]},b:"1"},
+  {c:"Le porteur fixe le défenseur",p:{"1":[70,62],"2":[118,48],"X1":[72,52]},b:"1"},
+  {c:"Passe au joueur libre",p:{"2":[96,30]},b:"2"},
+  {c:"Finition",p:{},b:"shot"}]},
+
+{id:"pnr",name:"Pick & roll 2c0 → 2c2",theme:"collectif",min:12,players:"4+",int:2,equip:"1 ballon",
+ summary:"Écran porteur, utilisation de l'écran et roll vers le cercle.",
+ steps:["Meneur en haut, intérieur au coude.","L'intérieur vient poser l'écran sur le défenseur (imaginaire) du meneur.","Le meneur sort de l'écran en dribble, l'intérieur roule vers le panier, passe et finition."],
+ rot:"On change de côté après chaque passage. Puis 2c2 avec défenseurs.",
+ keys:["Écran : appuis larges, angle vers la ligne de touche","Utiliser l'écran épaule contre épaule","Roll main cible"],
+ vars:["Pop (l'intérieur s'écarte à 3 pts)","Rejet de l'écran"],
+ frames:[
+  {c:"Meneur en haut, intérieur au coude",p:{"1":[75,98],"5":[100,66]},b:"1"},
+  {c:"Écran",p:{"5":[86,92]},b:"1"},
+  {c:"Sortie d'écran, roll",p:{"1":[116,70],"5":[86,32]},b:"1"},
+  {c:"Passe au roller",p:{},b:"5"},
+  {c:"Finition",p:{},b:"shot"}]},
+
+{id:"theme-game",name:"Match à thème 5c5",theme:"collectif",min:15,players:"10",int:3,equip:"chasubles",
+ summary:"Opposition avec une contrainte liée au thème de la séance (ex. : panier = 3 pts s'il vient d'une passe en course).",
+ steps:["5c5 sur demi-terrain ou terrain entier.","Le coach annonce la contrainte et le bonus de points.","Arrêts courts pour corriger, puis on rejoue."],
+ rot:"Équipes de 5, l'équipe qui perd sort (s'il y a des remplaçants) ou périodes de 4 min.",
+ keys:["Une seule consigne à la fois","Récompenser le comportement voulu","Garder le score visible"],
+ vars:["Stop défensif = 1 pt","3 passes minimum avant tir","Interdit de dribbler en zone arrière"],
+ frames:[
+  {c:"Positions de départ",p:{"1":[75,100],"2":[128,64],"3":[22,64],"4":[116,22],"5":[38,30],"X1":[75,86],"X2":[114,62],"X3":[36,62],"X4":[104,26],"X5":[50,32]},b:"1"},
+  {c:"Circulation du ballon",p:{},b:"2"},
+  {c:"Renversement",p:{"1":[70,96]},b:"1"}]},
+
+{id:"navettes",name:"Navettes (suicides)",theme:"physique",min:6,players:"tous",int:3,equip:"aucun",
+ summary:"Courses aller-retour vers les lignes du terrain : travail anaérobie.",
+ steps:["Départ ligne de fond.","Aller-retour ligne des LF, puis milieu de terrain, puis LF opposée, puis ligne de fond opposée.","Récupération de 30 s entre les séries."],
+ rot:"Par vagues. 3 à 5 séries selon le niveau.",
+ keys:["Toucher la ligne avec la main","Freiner bas, repartir fort","Encourager les derniers"],
+ vars:["Avec dribble","Temps imposé par série"],court:"full",
+ frames:[
+  {c:"Départ ligne de fond",p:{"1":[50,276],"2":[100,276]}},
+  {c:"Ligne des LF",p:{"1":[50,222],"2":[100,222]}},
+  {c:"Retour",p:{"1":[50,276],"2":[100,276]}},
+  {c:"Milieu de terrain",p:{"1":[50,140],"2":[100,140]}},
+  {c:"Retour",p:{"1":[50,276],"2":[100,276]}}]},
+
+{id:"cooldown",name:"Retour au calme + débrief",theme:"calme",min:8,players:"tous",int:1,equip:"aucun",
+ summary:"Étirements légers, respiration, et 2 minutes de débrief : ce qu'on retient de la séance.",
+ steps:["Trottinement léger 1 min.","Étirements mollets, ischios, quadriceps, épaules (20-30 s chacun).","Cercle d'équipe : 1 point positif, 1 point à travailler."],
+ rot:"Tous ensemble.",
+ keys:["Respirer lentement","Pas d'étirements forcés","Débrief court et concret"],
+ vars:["Chaque joueur dit un mot sur la séance"],frames:null}
+];
+
+/* ---------- Accès aux exercices ---------- */
+function getDrill(id){
+  const b=DRILLS.find(d=>d.id===id);if(b)return b;
+  const c=S.drills[id];if(!c)return null;
+  if(c.base&&!c.frames){const bd=DRILLS.find(d=>d.id===c.base);if(bd)return Object.assign({},c,{frames:bd.frames,court:bd.court})}
+  return c;
+}
+function allDrills(){return DRILLS.concat(Object.values(S.drills).filter(d=>!d.deleted).map(d=>getDrill(d.id)).filter(Boolean))}
+function thC(t){return(THEMES[t]||{c:"#888"}).c}
+function thN(t){return(THEMES[t]||{n:t}).n}
+function dots(n){return "●".repeat(n||1)+"○".repeat(3-(n||1))}
+
+/* ---------- Schéma animé ---------- */
+function drillFrames(d){
+  if(!d||!d.frames||!d.frames.length)return null;
+  const out=[];let pos={},b=null;
+  d.frames.forEach(f=>{pos=Object.assign({},pos,f.p||{});b=("b" in f)?f.b:(b==="shot"?null:b);out.push({c:f.c||"",p:pos,b})});
+  return out;
+}
+function courtFull(inner){
+  const half=`<rect x="0" y="0" width="150" height="140"/><rect x="50.5" y="0" width="49" height="58"/><circle cx="75" cy="58" r="18"/>
+    <path d="M9 0 L9 ${CORNER_Y} A${R3} ${R3} 0 0 0 141 ${CORNER_Y} L141 0"/><path d="M62.5 15.75 A12.5 12.5 0 0 0 87.5 15.75"/>
+    <line x1="66" y1="12" x2="84" y2="12"/><circle cx="75" cy="15.75" r="2.25"/>`;
+  return `<svg viewBox="-2 -2 154 284" class="court dg"><rect x="0" y="0" width="150" height="280" class="cfloor"/>
+    <g class="cl">${half}<g transform="translate(0 280) scale(1 -1)">${half}</g><circle cx="75" cy="140" r="18"/></g>${inner}</svg>`;
+}
+function courtHalf(inner){return courtSVG(inner).replace('class="court"','class="court dg"')}
+const lerp=(a,b,u)=>a+(b-a)*u;
+const ease=u=>u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;
+function basketFor(d,y){return d.court==="full"&&y>140?[75,264.25]:[75,15.75]}
+function arrowPath(x1,y1,x2,y2,kind){
+  const dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L,sh=Math.min(5,L*.3);
+  x2-=ux*sh;y2-=uy*sh;x1+=ux*3.5;y1+=uy*3.5;
+  if(kind==="d"){ // zigzag = dribble
+    const L2=Math.hypot(x2-x1,y2-y1),n=Math.max(2,Math.round(L2/5));let p=`M${x1} ${y1}`;
+    for(let k=1;k<=n;k++){const t=k/n,o=(k===n?0:(k%2?2.2:-2.2));p+=` L${x1+(x2-x1)*t-uy*o} ${y1+(y2-y1)*t+ux*o}`}
+    return p;
+  }
+  return `M${x1} ${y1} L${x2} ${y2}`;
+}
+function drawEnt(id,x,y){
+  if(id[0]==="K")return `<path d="M${x} ${y-3.2} L${x+3} ${y+2.4} L${x-3} ${y+2.4}Z" fill="#f97316" stroke="#9a3412" stroke-width=".5"/>`;
+  if(id==="C")return `<rect x="${x-4}" y="${y-4}" width="8" height="8" rx="1.5" fill="#111827"/><text x="${x}" y="${y+2.2}" class="dgt w">C</text>`;
+  if(id[0]==="X")return `<path d="M${x-3.6} ${y-3.6}L${x+3.6} ${y+3.6}M${x+3.6} ${y-3.6}L${x-3.6} ${y+3.6}" stroke="#1d4ed8" stroke-width="1.6" stroke-linecap="round"/><text x="${x+5.2}" y="${y+5}" class="dgt b">${id.slice(1)}</text>`;
+  if(/^[a-z]$/.test(id))return `<circle cx="${x}" cy="${y}" r="3.2" fill="#fed7aa" stroke="#c2410c" stroke-width=".6"/>`;
+  return `<circle cx="${x}" cy="${y}" r="4.4" fill="#ea580c" stroke="#7c2d12" stroke-width=".7"/><text x="${x}" y="${y+2}" class="dgt w">${id}</text>`;
+}
+function diagramSVG(d,s){
+  const F=drillFrames(d);if(!F)return "";
+  const n=F.length,i=Math.min(n-1,Math.floor(s)),u=i>=n-1?0:ease(Math.max(0,Math.min(1,s-i)));
+  const A=F[i],B=F[Math.min(n-1,i+1)],P={};
+  Object.keys(B.p).forEach(id=>{const a=A.p[id]||B.p[id],b=B.p[id];P[id]=[lerp(a[0],b[0],u),lerp(a[1],b[1],u)]});
+  let arrows="";
+  if(i<n-1){
+    Object.keys(B.p).forEach(id=>{const a=A.p[id],b=B.p[id];if(!a||Math.hypot(a[0]-b[0],a[1]-b[1])<.6)return;
+      const kind=(A.b===id&&B.b===id)?"d":"m";
+      arrows+=`<path d="${arrowPath(a[0],a[1],b[0],b[1],kind)}" class="ar ${kind}" marker-end="url(#ah)"/>`});
+    if(A.b&&B.b&&A.b!==B.b&&A.b!=="shot"&&B.b!=="shot"&&A.p[A.b]&&B.p[B.b]){const a=A.p[A.b],b=B.p[B.b];arrows+=`<path d="${arrowPath(a[0],a[1],b[0],b[1],"p")}" class="ar p" marker-end="url(#ah)"/>`}
+    if(B.b==="shot"&&A.b&&A.b!=="shot"&&B.p[A.b]){const a=B.p[A.b],k=basketFor(d,a[1]);arrows+=`<path d="${arrowPath(a[0],a[1],k[0],k[1],"s")}" class="ar s" marker-end="url(#ahs)"/>`}
+  }
+  // ballon
+  let ball="";
+  const bp=(holder,frameP)=>holder&&holder!=="shot"&&P[holder]?[P[holder][0]+3.2,P[holder][1]-3.2]:null;
+  if(A.b&&A.b!=="shot"){
+    let from=[(A.p[A.b]||[0,0])[0]+3.2,(A.p[A.b]||[0,0])[1]-3.2],pos=from;
+    if(B.b===A.b||i>=n-1){pos=bp(A.b)||from}
+    else if(B.b==="shot"){const sh=P[A.b]||A.p[A.b],k=basketFor(d,sh[1]);pos=[lerp(sh[0]+3.2,k[0],u),lerp(sh[1]-3.2,k[1],u)]}
+    else if(B.b&&B.p[B.b]){const t=B.p[B.b];pos=[lerp(from[0],t[0]+3.2,u),lerp(from[1],t[1]-3.2,u)]}
+    else pos=bp(A.b)||from;
+    ball=`<circle cx="${pos[0]}" cy="${pos[1]}" r="2.3" fill="#f59e0b" stroke="#78350f" stroke-width=".6"/>`;
+  }else if(A.b==="shot"){const k=basketFor(d,60);ball=`<circle cx="${k[0]}" cy="${k[1]}" r="2.3" fill="#f59e0b" stroke="#78350f" stroke-width=".6"/>`}
+  const ents=Object.keys(P).sort((a,b)=>(a[0]==="K"?-1:0)-(b[0]==="K"?-1:0)).map(id=>drawEnt(id,P[id][0],P[id][1])).join("");
+  const defs=`<defs><marker id="ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6z" fill="#1f2937"/></marker>
+    <marker id="ahs" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6z" fill="#ea580c"/></marker></defs>`;
+  const inner=defs+`<g>${arrows}</g>${ents}${ball}`;
+  return d.court==="full"?courtFull(inner):courtHalf(inner);
+}
+/* lecteur : une étape = 0,6 s de pause + 1 s de mouvement */
+const SEG=1.6,HOLD=.6;
+const DIAG={d:null,s:0,play:false,raf:0,last:0,loop:false};
+function stepT(s){const i=Math.floor(s/SEG),l=s-i*SEG;return i+(l<HOLD?0:(l-HOLD)/(SEG-HOLD))}
+function diagDraw(){
+  const el=document.getElementById("diag");if(!el||!DIAG.d)return;
+  const F=drillFrames(DIAG.d);if(!F)return;
+  const t=Math.min(F.length-1,stepT(DIAG.s));
+  el.innerHTML=diagramSVG(DIAG.d,t);
+  const i=Math.min(F.length-1,Math.floor(t)),cap=document.getElementById("diagCap");
+  if(cap)cap.textContent=`Étape ${i+1}/${F.length} · ${F[i].c}`;
+  const pb=document.getElementById("diagPlay");if(pb)pb.textContent=DIAG.play?"❚❚":"▶";
+}
+function diagLoop(ts){
+  if(!DIAG.play){DIAG.raf=0;return}
+  const F=drillFrames(DIAG.d);if(!F||!document.getElementById("diag")){DIAG.play=false;DIAG.raf=0;return}
+  const dt=DIAG.last?Math.min(.1,(ts-DIAG.last)/1000):0;DIAG.last=ts;DIAG.s+=dt;
+  const end=(F.length-1)*SEG+1.4;
+  if(DIAG.s>=end){if(DIAG.loop)DIAG.s=0;else{DIAG.s=(F.length-1)*SEG;DIAG.play=false}}
+  diagDraw();DIAG.raf=requestAnimationFrame(diagLoop);
+}
+function diagStart(d,autoplay,loop){
+  DIAG.d=d;DIAG.loop=!!loop;
+  if(DIAG.raf){cancelAnimationFrame(DIAG.raf);DIAG.raf=0}
+  if(DIAG.keep!==d.id){DIAG.s=0;DIAG.keep=d.id}
+  DIAG.play=!!autoplay&&!DIAG.paused;DIAG.last=0;diagDraw();
+  if(DIAG.play)DIAG.raf=requestAnimationFrame(diagLoop);
+}
+function diagToggle(){DIAG.play=!DIAG.play;DIAG.paused=!DIAG.play;DIAG.last=0;
+  const F=drillFrames(DIAG.d);if(DIAG.play&&F&&DIAG.s>=(F.length-1)*SEG)DIAG.s=0;
+  diagDraw();if(DIAG.play&&!DIAG.raf)DIAG.raf=requestAnimationFrame(diagLoop)}
+function diagStep(k){const F=drillFrames(DIAG.d);if(!F)return;DIAG.play=false;DIAG.paused=true;
+  const i=Math.max(0,Math.min(F.length-1,Math.round(stepT(DIAG.s))+k));DIAG.s=i*SEG;diagDraw()}
+function thumbSVG(d){return drillFrames(d)?diagramSVG(d,0):`<div class="nothumb" style="color:${thC(d.theme)}">${d.video?"▶":"📝"}</div>`}
+
+/* ---------- Séances ---------- */
+function sessList(){return Object.values(S.sessions).filter(x=>!x.deleted)}
+function sTotal(se){return(se.blocks||[]).reduce((a,b)=>a+(+b.min||0),0)}
+function saveSess(se){S.sessions[se.id]=se;touch("s:"+se.id)}
+function newSession(extra){
+  const id=uid();const d=new Date(),dd=fmtDate(today()).slice(0,5);
+  const se=Object.assign({id,title:"Séance du "+dd,date:today(),target:90,focus:"",blocks:[],status:"plan",createdAt:Date.now(),updatedAt:0},extra||{});
+  saveSess(se);return se;
+}
+function timelineBar(se,h){
+  const tot=Math.max(sTotal(se),se.target||0,1);
+  return `<div class="tl" style="height:${h||12}px">${(se.blocks||[]).map(b=>{const d=getDrill(b.d)||{theme:"calme",name:"?"};return `<span style="width:${b.min/tot*100}%;background:${thC(d.theme)}" title="${esc(d.name)}"></span>`}).join("")}</div>`;
+}
+function intensitySVG(se){
+  const bl=se.blocks||[];if(bl.length<2)return "";
+  const tot=sTotal(se)||1;let x=0;const pts=[];
+  bl.forEach(b=>{const d=getDrill(b.d)||{int:1};const w=b.min/tot*300;pts.push([x+w/2,40-(d.int||1)*11]);x+=w});
+  const path=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1]).join(" ");
+  return `<svg viewBox="0 0 300 44" class="intsvg" preserveAspectRatio="none"><path d="${path}" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linejoin="round"/>${pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="2.6" fill="var(--acc)"/>`).join("")}</svg>
+    <div class="small muted" style="display:flex;justify-content:space-between"><span>Intensité ↑</span><span>début → fin de séance</span></div>`;
+}
+function sessText(se){
+  const L=[`🏀 ${se.title} – ${fmtDate(se.date)} (${sTotal(se)} min)`];
+  if(se.focus)L.push("Objectif : "+se.focus);
+  L.push("");
+  (se.blocks||[]).forEach((b,i)=>{const d=getDrill(b.d)||{name:"?"};L.push(`${i+1}. ${d.name} – ${b.min} min${b.note?" ("+b.note+")":""}`)});
+  return L.join("\n");
+}
+
+/* ---------- Séance générée depuis les stats de match ---------- */
+function genFromStats(){
+  const s=season(),n=s.n,t=s.team,need=[];
+  const add=(id,why)=>{if(!need.find(x=>x[0]===id))need.push([id,why])};
+  const enough=n&&(t.fga+t.fta)>=25;
+  if(enough){
+    const P=(m,a)=>Math.round(m/a*100)+"%";
+    if(t.fta>=6&&t.ftm/t.fta<.65)add("ft-fatigue",`${P(t.ftm,t.fta)} aux lancers francs`);
+    if(t.tpa>=10&&t.tpm/t.tpa<.30)add("five-spots",`${P(t.tpm,t.tpa)} à 3 pts`);
+    const sh=collectShots(s.gs,"").shots,rq=sh.filter(x=>x.z==="rq");
+    if(rq.length>=8&&rq.filter(x=>x.made).length/rq.length<.5)add("mikan",`${P(rq.filter(x=>x.made).length,rq.length)} dans la raquette`);
+    if(t.fga>=20&&t.fgm/t.fga<.40)add("give-go",`${P(t.fgm,t.fga)} aux tirs : créer des tirs faciles`);
+    if(t.tov/n>14)add("slalom",`${(t.tov/n).toFixed(1)} balles perdues par match`);
+    if(t.dreb/n<22)add("boxout",`${(t.dreb/n).toFixed(1)} rebonds défensifs par match`);
+    if(t.pf/n>18)add("zigzag-def",`${(t.pf/n).toFixed(1)} fautes par match : défendre avec les pieds`);
+    if(s.pa>s.pf)add("shell",`${(s.pa/n).toFixed(1)} pts encaissés par match`);
+    if(t.ast/n<8)add("pnr",`${(t.ast/n).toFixed(1)} passes décisives par match`);
+  }
+  [["closeout","Base défensive sur porteur"],["five-spots","Volume de tirs"],["2v1","Jeu rapide"],["pass-follow","Qualité de passe"]].forEach(x=>{if(need.length<3)add(x[0],x[1])});
+  const main=need.slice(0,4);
+  const blocks=[{d:"lay-lines",min:10,why:"Échauffement"}]
+    .concat(main.map(([d,why])=>({d,min:14,why})))
+    .concat([{d:"theme-game",min:15,why:"Mettre en application en opposition"},{d:"cooldown",min:8,why:"Récupération et débrief"}]);
+  let tot=blocks.reduce((a,b)=>a+b.min,0),k=0;
+  while(tot<90&&k<200){const b=blocks[1+(k%main.length)];if(b.min<22){b.min++;tot++}k++}
+  while(tot>90){const b=blocks.slice(1,-2).sort((x,y)=>y.min-x.min)[0];if(!b||b.min<=8)break;b.min--;tot--}
+  blocks.forEach(b=>b.id=uid());
+  return newSession({title:"Séance ciblée – "+fmtDate(today()).slice(0,5),blocks,auto:true,
+    focus:enough?"D'après "+n+" match"+(n>1?"s":"")+" : "+main.map(x=>x[1]).join(" · "):"Séance équilibrée (pas encore assez de stats de match)"});
+}
+
+/* ---------- Équipes équilibrées ---------- */
+function playerRating(id){const s=season(),r=s.pl[id];return r&&r.gp?r.eff/r.gp:0}
+function makeTeams(ids,k){
+  const sorted=ids.slice().sort((a,b)=>playerRating(b)-playerRating(a)),G=Array.from({length:k},()=>[]);
+  sorted.forEach((id,i)=>{const r=Math.floor(i/k),c=i%k;G[r%2?k-1-c:c].push(id)});
+  return G;
+}
+
+/* ---------- Mode terrain ---------- */
+const R={sid:null,i:0,left:0,run:false,last:0,warned:false};
+let actx=null;
+function beep(f,ms,n){try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();if(actx.state==="suspended")actx.resume();
+  for(let k=0;k<(n||1);k++){const o=actx.createOscillator(),g=actx.createGain();o.frequency.value=f||880;o.type="square";g.gain.value=.08;o.connect(g);g.connect(actx.destination);
+    const t0=actx.currentTime+k*(ms/1000+.12);o.start(t0);o.stop(t0+(ms||250)/1000)}}catch(e){}}
+function runLoad(i){const se=S.sessions[R.sid];if(!se)return;R.i=Math.max(0,Math.min(se.blocks.length-1,i));R.left=(se.blocks[R.i].min||0)*60000;R.run=false;R.warned=false;DIAG.paused=false;DIAG.keep=null}
+setInterval(()=>{
+  if(S.view!=="train"||S.tv!=="run"||!R.run)return;
+  const now=Date.now();R.left-=now-R.last;R.last=now;
+  if(R.left<=30000&&!R.warned){R.warned=true;beep(660,120,2)}
+  if(R.left<=0){
+    const se=S.sessions[R.sid];beep(880,500,3);vib([300,120,300]);
+    if(se&&R.i<se.blocks.length-1){runLoad(R.i+1);toast("⏭ "+((getDrill(se.blocks[R.i].d)||{}).name||""));render()}
+    else{R.run=false;R.left=0;render();bilanModal()}
+    return;
+  }
+  const el=document.getElementById("runT");if(el)el.textContent=mmss(R.left,true);
+  const pr=document.getElementById("runP");const se=S.sessions[R.sid];
+  if(pr&&se){const full=(se.blocks[R.i].min||1)*60000;pr.style.width=(100-R.left/full*100)+"%"}
+},250);
+
+/* ---------- Vues ---------- */
+function vTrain(){
+  if(S.tv==="lib")return vLib();
+  if(S.tv==="drill")return vDrill();
+  if(S.tv==="edit"&&S.sessions[S.tSel])return vSession();
+  if(S.tv==="run"&&S.sessions[R.sid])return vRun();
+  if(S.tv==="drillEdit")return vDrillEdit();
+  S.tv="home";return vTrainHome();
+}
+function sessRow(se){
+  const done=se.status==="done";
+  return `<button class="srow" data-t="openSess" data-v="${se.id}">
+    <div class="srow-h"><b>${esc(se.title)}</b><span class="small muted">${fmtDate(se.date)} · ${sTotal(se)} min${done?" · ✅":""}${se.auto?" · ⚡":""}</span></div>
+    ${timelineBar(se,8)}</button>`;
+}
+function vTrainHome(){
+  const L=sessList(),plan=L.filter(x=>x.status!=="done").sort((a,b)=>(a.date||"").localeCompare(b.date||"")),done=L.filter(x=>x.status==="done").sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  const th={};let tot=0;done.forEach(se=>(se.blocks||[]).forEach(b=>{const d=getDrill(b.d);if(!d)return;th[d.theme]=(th[d.theme]||0)+(+b.min||0);tot+=+b.min||0}));
+  const bars=THORDER.filter(k=>th[k]).sort((a,b)=>th[b]-th[a]).map(k=>`<div class="throw"><span>${thN(k)}</span><div class="thbar"><i style="width:${th[k]/tot*100}%;background:${thC(k)}"></i></div><b>${Math.round(th[k]/tot*100)}%</b></div>`).join("");
+  return `<div class="card"><h2>Entraînement</h2>
+      <div class="tgrid">
+        <button class="tbig acc" data-t="newSess"><span>＋</span>Nouvelle séance</button>
+        <button class="tbig" data-t="genSess"><span>⚡</span>Séance d'après les stats</button>
+        <button class="tbig" data-t="lib"><span>📚</span>Exercices (${allDrills().length})</button>
+      </div>
+      <p class="small muted" style="margin:8px 0 0">⚡ analyse vos matchs (adresse, pertes, rebonds, fautes…) et construit une séance de 90 min qui cible vos points faibles.</p></div>
+    <div class="card"><h2>À venir</h2>${plan.map(sessRow).join("")||`<div class="empty" style="padding:14px">Aucune séance prévue.</div>`}</div>
+    ${done.length?`<div class="card"><h2>Séances passées</h2>${done.slice(0,8).map(sessRow).join("")}</div>
+    <div class="card"><h2>Où passe le temps d'entraînement ?</h2><p class="small muted" style="margin:0 0 8px">Sur ${done.length} séance${done.length>1?"s":""} faite${done.length>1?"s":""} (${tot} min)</p>${bars}</div>`:""}`;
+}
+function vSession(){
+  const se=S.sessions[S.tSel],tot=sTotal(se),tg=+se.target||90,diff=tot-tg,done=se.status==="done";
+  const rows=(se.blocks||[]).map((b,i)=>{const d=getDrill(b.d)||{name:"Exercice supprimé",theme:"calme"};
+    return `<div class="blk"><i style="background:${thC(d.theme)}"></i>
+      <div class="blk-m" data-t="openDrill" data-v="${esc(b.d)}"><b>${i+1}. ${esc(d.name)}</b><span class="small muted">${thN(d.theme)} · ${dots(d.int)}${b.why?` · <span style="color:var(--acc)">${esc(b.why)}</span>`:""}</span></div>
+      <div class="blk-t"><button data-t="bMin" data-v="${b.id}" data-k="-1">−</button><b>${b.min}′</b><button data-t="bMin" data-v="${b.id}" data-k="1">+</button></div>
+      <div class="blk-o"><button data-t="bMove" data-v="${b.id}" data-k="-1" ${i?"":"disabled"}>↑</button><button data-t="bMove" data-v="${b.id}" data-k="1" ${i<se.blocks.length-1?"":"disabled"}>↓</button><button data-t="bDel" data-v="${b.id}">✕</button></div>
+    </div>`}).join("");
+  return `<button class="back" data-t="home">← Séances</button>
+    <div class="card">
+      <div class="field"><span>Titre</span><input data-ts="title" value="${esc(se.title)}"></div>
+      <div class="grid2"><div class="field"><span>Date</span><input type="date" data-ts="date" value="${esc(se.date)}"></div>
+        <div class="field"><span>Durée prévue</span><select data-ts="target">${[45,60,75,90,105,120].map(v=>`<option value="${v}" ${v===tg?"selected":""}>${v} min</option>`).join("")}</select></div></div>
+      <div class="field" style="margin:0"><span>Objectif de la séance</span><input data-ts="focus" value="${esc(se.focus||"")}" placeholder="ex. défense sur porteur, adresse aux LF"></div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px"><b>${tot} / ${tg} min</b><span class="small" style="color:${Math.abs(diff)<=5?"var(--ok)":"var(--acc)"}">${diff===0?"Pile dans le temps":diff>0?`+${diff} min de trop`:`${-diff} min à remplir`}</span></div>
+      ${timelineBar(se,14)}
+      <div style="margin-top:10px">${intensitySVG(se)}</div>
+    </div>
+    <div class="card"><h2>Programme</h2>${rows||`<div class="empty" style="padding:14px">Ajoute des exercices depuis la bibliothèque.</div>`}
+      <button class="btn ghost block" style="margin-top:8px" data-t="libPick">＋ Ajouter des exercices</button></div>
+    ${done?`<div class="card"><h2>Bilan</h2><p style="margin:0">${"⭐".repeat(se.rating||0)||"—"} ${se.present?`· ${se.present.length} présents`:""}</p>${se.notes?`<p class="small" style="margin:6px 0 0;white-space:pre-wrap">${esc(se.notes)}</p>`:""}</div>`:""}
+    <div class="endbar"><button class="btn acc" data-t="run" ${se.blocks.length?"":"disabled"}>▶ Mode terrain</button><button class="btn ghost" data-t="teams">👥 Présents & équipes</button></div>
+    <div class="endbar"><button class="btn ghost" data-t="shareSess">📤 Partager</button><button class="btn ghost" data-t="${done?"reopenSess":"bilan"}">${done?"↺ Rouvrir":"✅ Terminer"}</button></div>
+    <button class="btn ghost block" style="color:var(--ko);margin-bottom:10px" data-t="askDelSess">Supprimer la séance</button>`;
+}
+function vLib(){
+  const se=S.pick&&S.sessions[S.tSel];
+  const list=allDrills().filter(d=>!S.libTh||d.theme===S.libTh);
+  return `<button class="back" data-t="${se?"backSess":"home"}">← ${se?"Retour à la séance":"Séances"}</button>
+    ${se?`<div class="banner">Ajout à « ${esc(se.title)} » · ${sTotal(se)} min</div>`:""}
+    <div class="card">
+      <input data-tl="q" placeholder="🔍 Rechercher un exercice" value="${esc(S.libQ||"")}">
+      <div class="chips"><button class="chip ${S.libTh?"":"sel"}" data-t="libTh" data-v="">Tous</button>${THORDER.map(k=>`<button class="chip ${S.libTh===k?"sel":""}" data-t="libTh" data-v="${k}"><i class="cdot" style="background:${thC(k)}"></i>${thN(k)}</button>`).join("")}</div>
+    </div>
+    <div id="libList">${list.map(d=>`<div class="dcard" data-name="${esc((d.name+" "+thN(d.theme)+" "+(d.summary||"")).toLowerCase())}">
+      <div class="dthumb" data-t="openDrill" data-v="${esc(d.id)}">${thumbSVG(d)}</div>
+      <div class="dinfo" data-t="openDrill" data-v="${esc(d.id)}"><b>${esc(d.name)}${S.drills[d.id]?" <span class='small muted'>(perso)</span>":""}</b>
+        <span class="badge" style="background:${thC(d.theme)}">${thN(d.theme)}</span>
+        <span class="small muted">${d.min||"?"} min · ${esc(d.players||"")} · ${dots(d.int)}</span>
+        <span class="small">${esc(d.summary||"")}</span></div>
+      ${se?`<button class="dadd" data-t="addBlock" data-v="${esc(d.id)}">＋</button>`:""}
+    </div>`).join("")}</div>
+    <button class="btn ghost block" style="margin-bottom:10px" data-t="newDrill">✏️ Créer mon propre exercice</button>`;
+}
+function ytId(u){const m=String(u||"").match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);return m?m[1]:null}
+function vDrill(){
+  const d=getDrill(S.dSel);if(!d){S.tv="lib";return vLib()}
+  const se=S.sessions[S.tSel],F=drillFrames(d),yt=ytId(d.video),custom=!!S.drills[d.id];
+  const list=a=>(a||[]).filter(Boolean).map(x=>`<li>${esc(x)}</li>`).join("");
+  return `<button class="back" data-t="${S.fromSess&&se?"backSess":"lib"}">← ${S.fromSess&&se?"Retour à la séance":"Exercices"}</button>
+    <div class="card">
+      <h2 style="margin-bottom:6px">${esc(d.name)}</h2>
+      <div class="row" style="gap:6px"><span class="badge" style="background:${thC(d.theme)}">${thN(d.theme)}</span><span class="small muted">${d.min||"?"} min · ${esc(d.players||"")} joueurs · intensité ${dots(d.int)}${d.equip?" · "+esc(d.equip):""}</span></div>
+      ${F?`<div class="dgwrap"><div id="diag"></div>
+        <div class="dgctl"><button data-t="dgStep" data-k="-1">⏮</button><button id="diagPlay" data-t="dgPlay">▶</button><button data-t="dgStep" data-k="1">⏭</button></div>
+        <p id="diagCap" class="small" style="text-align:center;margin:4px 0 0"></p>
+        <p class="legend small muted"><span class="lg o">●</span> attaquant <span class="lg x">✕</span> défenseur <span class="lg c">■</span> coach <span class="lg k">▲</span> plot · — course · 〰 dribble · - - passe · <span style="color:#ea580c">→</span> tir</p></div>`:""}
+      ${yt?`<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/${yt}" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`:""}
+      ${d.summary?`<p style="margin:10px 0 0">${esc(d.summary)}</p>`:""}
+    </div>
+    ${d.steps&&d.steps.length?`<div class="card"><h2>Déroulement</h2><ol class="dl">${list(d.steps)}</ol></div>`:""}
+    ${d.rot?`<div class="card"><h2>🔄 Rotations</h2><p style="margin:0">${esc(d.rot)}</p></div>`:""}
+    ${d.keys&&d.keys.length?`<div class="card"><h2>🎯 Points clés</h2><ul class="dl">${list(d.keys)}</ul></div>`:""}
+    ${d.vars&&d.vars.length?`<div class="card"><h2>➕ Variantes</h2><ul class="dl">${list(d.vars)}</ul></div>`:""}
+    ${!yt?`<a class="btn ghost block" style="text-align:center;text-decoration:none;margin-bottom:10px" href="https://www.youtube.com/results?search_query=${encodeURIComponent("exercice basket "+d.name)}" target="_blank" rel="noopener">▶ Voir des vidéos de cet exercice (YouTube)</a>`:""}
+    ${se?`<button class="btn acc block" style="margin-bottom:10px" data-t="addBlock" data-v="${esc(d.id)}">＋ Ajouter à « ${esc(se.title)} »</button>`:""}
+    ${custom?`<div class="endbar"><button class="btn ghost" data-t="editDrill" data-v="${esc(d.id)}">✏️ Modifier</button><button class="btn ghost" style="color:var(--ko)" data-t="delDrill" data-v="${esc(d.id)}">Supprimer</button></div>`:""}`;
+}
+function vDrillEdit(){
+  const d=S.dEdit||{};const L=a=>esc((a||[]).join("\n"));
+  return `<button class="back" data-t="lib">← Exercices</button>
+    <div class="card"><h2>${d.id?"Modifier l'exercice":"Nouvel exercice"}</h2>
+      <div class="field"><span>Nom</span><input id="de_name" value="${esc(d.name||"")}"></div>
+      <div class="grid2"><div class="field"><span>Thème</span><select id="de_theme">${THORDER.map(k=>`<option value="${k}" ${d.theme===k?"selected":""}>${thN(k)}</option>`).join("")}</select></div>
+        <div class="field"><span>Durée (min)</span><input id="de_min" type="number" inputmode="numeric" value="${d.min||10}"></div></div>
+      <div class="grid2"><div class="field"><span>Joueurs</span><input id="de_players" value="${esc(d.players||"")}" placeholder="ex. 6+"></div>
+        <div class="field"><span>Intensité</span><select id="de_int">${[1,2,3].map(v=>`<option value="${v}" ${(d.int||2)===v?"selected":""}>${dots(v)}</option>`).join("")}</select></div></div>
+      <div class="field"><span>Matériel</span><input id="de_equip" value="${esc(d.equip||"")}"></div>
+      <div class="field"><span>Résumé</span><input id="de_summary" value="${esc(d.summary||"")}"></div>
+      <div class="field"><span>Déroulement (une étape par ligne)</span><textarea id="de_steps" rows="4">${L(d.steps)}</textarea></div>
+      <div class="field"><span>Rotations</span><textarea id="de_rot" rows="2">${esc(d.rot||"")}</textarea></div>
+      <div class="field"><span>Points clés (un par ligne)</span><textarea id="de_keys" rows="3">${L(d.keys)}</textarea></div>
+      <div class="field"><span>Variantes (une par ligne)</span><textarea id="de_vars" rows="2">${L(d.vars)}</textarea></div>
+      <div class="field"><span>Vidéo (lien YouTube, s'affiche dans la fiche)</span><input id="de_video" value="${esc(d.video||"")}" placeholder="https://youtu.be/…" inputmode="url"></div>
+      <div class="field"><span>Schéma animé</span><select id="de_base"><option value="">Aucun</option>${DRILLS.filter(x=>x.frames).map(x=>`<option value="${x.id}" ${d.base===x.id?"selected":""}>Reprendre : ${esc(x.name)}</option>`).join("")}</select></div>
+      <button class="btn acc block" data-t="saveDrill">Enregistrer</button>
+    </div>`;
+}
+function vRun(){
+  const se=S.sessions[R.sid],b=se.blocks[R.i],d=getDrill(b.d)||{name:"?",theme:"calme"},nx=se.blocks[R.i+1],nd=nx&&getDrill(nx.d);
+  return `<div class="run">
+    <div class="run-top"><button class="menu" data-t="runQuit">✕</button><div class="run-ti"><b>${esc(se.title)}</b><span class="small muted">Exercice ${R.i+1}/${se.blocks.length}</span></div><button class="menu" data-t="teams">👥</button></div>
+    <div class="run-name" style="border-color:${thC(d.theme)}"><span class="badge" style="background:${thC(d.theme)}">${thN(d.theme)}</span> ${esc(d.name)}</div>
+    <div class="run-timer"><span id="runT">${mmss(R.left,true)}</span><div class="run-prog"><i id="runP" style="width:${100-R.left/((b.min||1)*60000)*100}%;background:${thC(d.theme)}"></i></div></div>
+    ${drillFrames(d)?`<div class="run-dg"><div id="diag"></div><p id="diagCap" class="small" style="text-align:center;margin:2px 0 0"></p></div>`:`<div class="run-txt">${esc(d.summary||"")}</div>`}
+    ${d.keys&&d.keys.length?`<ul class="run-keys">${d.keys.slice(0,3).map(k=>`<li>${esc(k)}</li>`).join("")}</ul>`:""}
+    <div class="run-ctl"><button data-t="runGo" data-k="-1" ${R.i?"":"disabled"}>⏮</button><button class="big ${R.run?"on":""}" data-t="runPlay">${R.run?"❚❚":"▶"}</button><button data-t="runGo" data-k="1" ${nx?"":"disabled"}>⏭</button></div>
+    <div class="run-next small muted">${nx?`Ensuite : <b>${esc(nd?nd.name:"?")}</b> · ${nx.min} min`:"Dernier exercice"}${b.note?` · Note : ${esc(b.note)}`:""}</div>
+  </div>`;
+}
+function trainAfter(){
+  document.body.classList.toggle("runmode",S.view==="train"&&S.tv==="run");
+  if(S.view!=="train")return;
+  if(S.tv==="drill"){const d=getDrill(S.dSel);if(d&&drillFrames(d))diagStart(d,true,false)}
+  if(S.tv==="run"){const se=S.sessions[R.sid],d=se&&getDrill(se.blocks[R.i].d);if(d&&drillFrames(d))diagStart(d,true,true)}
+  if(S.tv==="lib"&&S.libQ)libFilter(S.libQ);
+}
+function libFilter(q){q=(q||"").toLowerCase().trim();document.querySelectorAll("#libList .dcard").forEach(c=>{c.style.display=!q||c.dataset.name.includes(q)?"":"none"})}
+
+/* ---------- Modales ---------- */
+function teamsModal(){
+  const se=S.sessions[S.tSel||R.sid];if(!se)return;
+  const act=S.team.players.filter(p=>!p.off);
+  if(!se.present)se.present=act.map(p=>p.id);
+  const pres=se.present.filter(id=>player(id));
+  modal(`<h2>👥 Présents (${pres.length})</h2>
+    <div class="chk" style="margin:8px 0">${act.map(p=>`<label><input type="checkbox" data-tp="${p.id}" ${pres.includes(p.id)?"checked":""}> #${esc(p.num)} ${esc(p.name)}</label>`).join("")}</div>
+    <p class="small muted" style="margin:0 0 6px">Équipes équilibrées d'après l'évaluation moyenne en match (les joueurs sans stats comptent pour 0).</p>
+    <div class="endbar" style="grid-template-columns:repeat(3,1fr);margin:0 0 8px"><button class="btn ghost" data-t="mkTeams" data-k="2">2 équipes</button><button class="btn ghost" data-t="mkTeams" data-k="3">3 groupes</button><button class="btn ghost" data-t="mkTeams" data-k="4">4 groupes</button></div>
+    <div id="teamsOut"></div>
+    <button class="btn ghost block" data-t="closeTeams">Fermer</button>`);
+}
+const TCOL=["#ea580c","#2563eb","#16a34a","#9333ea"],TNAME=["Orange","Bleu","Vert","Violet"];
+function bilanModal(){
+  const se=S.sessions[S.tSel||R.sid];if(!se)return;S.bil={r:se.rating||0};
+  modal(`<h2>✅ Bilan de la séance</h2>
+    <p class="small muted" style="margin:0 0 6px">Comment s'est passée la séance ?</p>
+    <div class="stars">${[1,2,3,4,5].map(k=>`<button data-t="bilR" data-k="${k}" class="${k<=S.bil.r?"on":""}">★</button>`).join("")}</div>
+    <div class="field"><span>Notes (ce qui a marché, à revoir…)</span><textarea id="bilN" rows="4">${esc(se.notes||"")}</textarea></div>
+    <p class="small muted">${se.present?se.present.length+" présents notés":"Présents : utilise 👥 pour les noter"}</p>
+    <button class="btn acc block" data-t="bilOK">Enregistrer et terminer</button>
+    <button class="btn ghost block" style="margin-top:8px" data-t="closeTeams">Plus tard</button>`);
+}
+
+/* ---------- Actions (capture : prioritaire sur le gestionnaire général) ---------- */
+document.addEventListener("click",e=>{
+  const el=e.target.closest("[data-t]");if(!el)return;
+  e.stopPropagation();
+  const a=el.dataset.t,v=el.dataset.v,k=+el.dataset.k;
+  const se=S.sessions[S.tSel];
+  const go=(tv)=>{S.tv=tv;render();window.scrollTo(0,0)};
+  switch(a){
+    case"home":S.pick=false;go("home");break;
+    case"newSess":{if(!canWrite)return;const n=newSession();S.tSel=n.id;S.pick=true;go("lib");toast("Séance créée : ajoute des exercices")}break;
+    case"genSess":{if(!canWrite)return;const n=genFromStats();S.tSel=n.id;S.pick=false;go("edit");toast("⚡ Séance générée d'après vos stats")}break;
+    case"lib":S.pick=!!(S.pick&&se);S.fromSess=false;go("lib");break;
+    case"libPick":S.pick=true;go("lib");break;
+    case"backSess":S.pick=false;S.fromSess=false;go("edit");break;
+    case"openSess":S.tSel=v;S.pick=false;go("edit");break;
+    case"openDrill":S.dSel=v;S.fromSess=S.tv==="edit";DIAG.paused=false;DIAG.keep=null;go("drill");break;
+    case"libTh":S.libTh=v;render();break;
+    case"addBlock":{if(!se)return;const d=getDrill(v);se.blocks.push({id:uid(),d:v,min:d.min||10});saveSess(se);toast(`＋ ${d.name} (${sTotal(se)} min)`);if(S.tv==="drill"){S.fromSess=true;go("edit")}else render()}break;
+    case"bMin":{const b=se.blocks.find(x=>x.id===v);if(b){b.min=Math.max(1,(b.min||0)+k);saveSess(se);render()}}break;
+    case"bMove":{const i=se.blocks.findIndex(x=>x.id===v),j=i+k;if(i>=0&&j>=0&&j<se.blocks.length){const t=se.blocks[i];se.blocks[i]=se.blocks[j];se.blocks[j]=t;saveSess(se);render()}}break;
+    case"bDel":se.blocks=se.blocks.filter(x=>x.id!==v);saveSess(se);render();break;
+    case"run":R.sid=se.id;runLoad(0);go("run");break;
+    case"runPlay":{if(!R.run){beep(1,1,1);R.last=Date.now();R.run=true;grabWake()}else{R.run=false;releaseWake()}render()}break;
+    case"runGo":runLoad(R.i+k);render();break;
+    case"runQuit":R.run=false;releaseWake();S.tSel=R.sid;go("edit");break;
+    case"teams":teamsModal();break;
+    case"mkTeams":{const s2=S.sessions[S.tSel||R.sid];const ids=(s2.present||[]).filter(id=>player(id));if(ids.length<k){toast("Pas assez de présents");return}
+      const G=makeTeams(ids,k);S.lastTeams=G;
+      document.getElementById("teamsOut").innerHTML=G.map((g,gi)=>`<div class="tgrp" style="border-color:${TCOL[gi]}"><b style="color:${TCOL[gi]}">${TNAME[gi]} (${g.length})</b><span>${g.map(id=>esc(pName(id))).join(", ")}</span></div>`).join("")+`<button class="btn ghost block" style="margin:6px 0 8px" data-t="copyTeams">📋 Copier les équipes</button>`}break;
+    case"copyTeams":copyText((S.lastTeams||[]).map((g,gi)=>`${TNAME[gi]} : ${g.map(pName).join(", ")}`).join("\n"),"Équipes copiées ✔");break;
+    case"closeTeams":closeModal();break;
+    case"shareSess":{const t=sessText(se);if(navigator.share)navigator.share({title:se.title,text:t}).catch(()=>{});else copyText(t,"Programme copié ✔")}break;
+    case"bilan":bilanModal();break;
+    case"bilR":S.bil.r=k;document.querySelectorAll(".stars button").forEach((b,i)=>b.classList.toggle("on",i<k));break;
+    case"bilOK":{const s2=S.sessions[S.tSel||R.sid];s2.rating=S.bil.r;s2.notes=document.getElementById("bilN").value;s2.status="done";s2.doneAt=Date.now();saveSess(s2);R.run=false;releaseWake();S.tSel=s2.id;closeModal();go("edit");toast("Séance terminée ✅")}break;
+    case"reopenSess":se.status="plan";saveSess(se);render();break;
+    case"askDelSess":modal(`<h2>Supprimer la séance ?</h2><p class="muted">« ${esc(se.title)} » sera supprimée pour tout le monde.</p><div class="endbar" style="margin:0"><button class="btn ghost" data-t="closeTeams">Annuler</button><button class="btn danger" data-t="delSess">Supprimer</button></div>`);break;
+    case"delSess":{const id=se.id;delete S.sessions[id];dirty.delete("s:"+id);tomb.add("s:"+id);saveLocal();schedule("s:"+id,0);closeModal();go("home")}break;
+    case"dgPlay":diagToggle();break;
+    case"dgStep":diagStep(k);break;
+    case"newDrill":S.dEdit={theme:"tir",min:10,int:2};go("drillEdit");break;
+    case"editDrill":S.dEdit=clone(S.drills[v]);go("drillEdit");break;
+    case"saveDrill":{
+      const g=id=>document.getElementById(id).value,lines=id=>g(id).split("\n").map(x=>x.trim()).filter(Boolean);
+      const name=g("de_name").trim();if(!name){toast("Donne un nom à l'exercice");return}
+      const id=(S.dEdit&&S.dEdit.id)||("c"+uid());
+      S.drills[id]={id,custom:true,name,theme:g("de_theme"),min:+g("de_min")||10,players:g("de_players"),int:+g("de_int")||2,equip:g("de_equip"),
+        summary:g("de_summary"),steps:lines("de_steps"),rot:g("de_rot"),keys:lines("de_keys"),vars:lines("de_vars"),video:g("de_video").trim(),base:g("de_base")||null,createdAt:(S.dEdit&&S.dEdit.createdAt)||Date.now(),updatedAt:0};
+      touch("d:"+id);S.dSel=id;S.fromSess=false;go("drill");toast("Exercice enregistré ✔")}break;
+    case"delDrill":{S.drills[v].deleted=true;touch("d:"+v);go("lib");toast("Exercice supprimé")}break;
+  }
+},true);
+document.addEventListener("input",e=>{
+  const t=e.target;
+  if(t.dataset.tl==="q"){S.libQ=t.value;libFilter(t.value)}
+});
+document.addEventListener("change",e=>{
+  const t=e.target;
+  if(t.dataset.ts){const se=S.sessions[S.tSel];if(!se)return;se[t.dataset.ts]=t.dataset.ts==="target"?+t.value:t.value;saveSess(se);if(t.tagName==="SELECT"){t.blur();render()}}
+  if(t.dataset.tp){const se=S.sessions[S.tSel||R.sid];if(!se)return;const id=t.dataset.tp;se.present=se.present||[];
+    if(t.checked){if(!se.present.includes(id))se.present.push(id)}else se.present=se.present.filter(x=>x!==id);saveSess(se);
+    const h=document.querySelector("#modalRoot h2");if(h)h.textContent=`👥 Présents (${se.present.length})`}
 });
 
 function isStandalone(){try{return matchMedia("(display-mode: standalone)").matches||navigator.standalone===true}catch(e){return false}}

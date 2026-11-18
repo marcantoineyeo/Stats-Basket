@@ -2,12 +2,10 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // Chaque équipe vit sous /teams/{code} : il faut connaître le code pour lire ou écrire.
-    // La liste des équipes n'est jamais lisible, donc impossible de découvrir les codes.
-    match /teams/{team}/meta/{doc} {
-      allow read, write: if request.auth != null && team.size() >= 8;
-    }
-    match /teams/{team}/games/{game} {
-      allow read, write: if request.auth != null && team.size() >= 8;
+    // meta = équipe, games = matchs, sessions = séances d'entraînement, drills = exercices perso
+    match /teams/{team}/{coll}/{doc} {
+      allow read, write: if request.auth != null && team.size() >= 8
+                         && coll in ['meta', 'games', 'sessions', 'drills'];
     }
   }
 }
